@@ -52,7 +52,7 @@
   display: flex;
   flex-wrap: wrap; }
 
-.mobile-search-container, .mobile-admin .content, .mobile-admin .mobile-user, .sign-out .content, .masthead .content, .mobile-header .content, .main-nav .content, .site-menu, .welcome, .feed-heading, .site-footer .content, .copyright-footer .content, .page-title .container, .payment-listing-options, .form-section-bottom, .transaction-header, .transaction .bank-entry-amount .bank-entry-inner, .buttons-footer .content, .check-buttons, .gray-container, .gray-section, .red-table {
+.mobile-search-container, .mobile-admin .content, .mobile-admin .mobile-user, .sign-out .content, .masthead .content, .mobile-header .content, .main-nav .content, .site-menu, .alert-container, .welcome, .feed-heading, .site-footer .content, .copyright-footer .content, .page-title .container, .payment-listing-options, .form-section-bottom, .transaction-header, .transaction .bank-entry-amount .bank-entry-inner, .buttons-footer .content, .check-buttons, .gray-container, .gray-section, .red-table {
   align-items: center;
   justify-content: space-between; }
 
@@ -876,6 +876,28 @@ a:focus {
 
 .padded-section {
   padding: 70px 0; }
+
+.alert-container {
+  display: flex;
+  background: #46be6e;
+  border: 2px solid #31a557;
+  border-radius: 5px;
+  font: "Roboto Regular", Helvetica, sans-serif;
+  margin-bottom: 30px;
+  padding: 10px; }
+
+.alert-container p {
+  color: #fff;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 10px; }
+
+.alert-container i {
+  color: #31a557; }
+
+.alert-container .fa-times {
+  cursor: pointer; }
 
 .welcome {
   background: url(../img/welcome-banner.jpg) no-repeat center center/cover;

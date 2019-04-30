@@ -55,8 +55,6 @@
     ]
 	});
 
-	
-
 	/***** VARIABLES *****/
 
 	const body = document.querySelector('body');
@@ -87,6 +85,10 @@
 	let tabContents = "";
 	let notifTabContents = "";
 
+	// Alert notification at home page
+	const closeAlert = document.getElementById('close-alert-container');
+
+	// Tabs for View Payments page
 	const tabMediaQuery = window.matchMedia("(max-width: 1040px)");
 	if (tabMediaQuery.matches) {
 		let tabParents = document.querySelectorAll('.tab-content');
@@ -98,7 +100,6 @@
 	}
 	
 	notifTabContents = document.querySelectorAll('.notif-tab-content');
-
 
 	/***** FUNCTIONS *****/
 
@@ -171,6 +172,12 @@
 			}
 
 	});
+
+	closeAlert.addEventListener('click', function(e) {
+
+			e.preventDefault();
+			console.log("Test");
+	})
 
 	notifButton.addEventListener('click', function(e) {
 

@@ -743,6 +743,33 @@ a:focus {
   padding: 70px 0;
 }
 
+.alert-container {
+  display: flex;
+  @extend %flexDefault;
+  background: #46be6e;
+  border: 2px solid #31a557;
+  border-radius: 5px;
+  font: $font;
+  margin-bottom: 30px;
+  padding: 10px;
+}
+
+.alert-container p {
+  color: $white;
+  font-size: 16px;
+  line-height: 1.5em;
+  margin: 0;
+  padding: 0 10px;
+}
+
+.alert-container i {
+  color: #31a557;
+}
+
+.alert-container .fa-times {
+  cursor: pointer;
+}
+
 .welcome {
   @extend %flex;
   @extend %flexDefault;
