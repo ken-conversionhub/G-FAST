@@ -1,0 +1,17 @@
+.mobile-nav,
+.mobile-search {
+  z-index: 1000;
+}
+
+.main-nav {
+  z-index: 1000;
+}
+
+.notifications-content {
+  z-index: 500;
+}
+
+.site-header,
+.mobile-header {
+  z-index: 100;
+}

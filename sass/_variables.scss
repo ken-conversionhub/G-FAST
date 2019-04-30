@@ -1,0 +1,158 @@
+// #### FONT VARIABLES ####
+
+$font: 'Roboto Regular', Helvetica, sans-serif;
+$font-bold: 'Roboto Bold';
+$font-medium: 'Roboto Medium';
+$font-light: 'Roboto Light';
+
+// #### COLOR VARIABLES ####
+
+$borderLightRed: #e09096;
+$crimson: #93000a;
+$red: #c8010f;
+$scarlet: #f9e5e7;
+
+$bgGray: #f0f0f0;
+$bluishGray: #323c47;
+$borderGray: #e6e8eb;
+$footerGray: #9c9c9c;
+$headerGray: #404756;
+$topHeaderGray: #f1f2f2;
+
+$mobileWhite: #f5fbf7;
+
+$black: #000;
+$green: #34b95f;
+$orange: #f88d3b;
+$white: #fff;
+
+// #### MIXINS ####
+
+@mixin flex-basis($property) {
+  -webkit-flex-basis: $property; /* Safari 6.1+ */
+  flex-basis: $property;
+}
+
+@mixin transform($property) {
+  -webkit-transform: $property; /* Safari */
+  -ms-transform: $property; /* IE 9 */
+  transform: $property;
+}
+
+@mixin transition($property) {
+  -webkit-transition: property; /* Safari */
+  transition: property;
+}
+
+// #### INHERITANCE / EXTENSIONS #####
+
+// For </small> dates and times 
+%dateText {
+  color: rgba(0, 0, 0, 0.7);
+  font-family: $font;
+  font-size: 13px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+%dropdown {
+  background: #fff;
+  border-radius: 5px;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  position: absolute;
+  transition: all 0.3s ease;
+  visibility: hidden;
+  z-index: 200;
+}
+
+%dropdownContainer {
+  min-width: 200px;
+  padding: 15px;
+  position: relative;
+}
+
+%dropdownTriangle {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid $white;
+  bottom: 100%;
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
+// Flexbox declaration
+%flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+%flexDefault {
+  align-items: center;
+  justify-content: space-between;
+}
+
+%footerLink {
+  color: $footerGray;
+  font: 18px $font-bold;
+  text-decoration: none;
+
+  &:hover {
+    color: $bgGray;
+  }
+}
+
+%grayBorders {
+  border: $borderGray 1px solid;
+  border-radius: 10px;
+}
+
+// Main headings (h2)
+%headerText {
+  color: $black;
+  font-family: $font-bold;
+  font-size: 30px;
+}
+
+// All standalone red links
+%redLink {
+  color: $red;
+  font-family: $font-bold;
+  font-size: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &:hover {
+    color: $crimson;
+  }
+}
+
+%smallText {
+  color: rgba(0, 0, 0, 0.7);
+  font: 13px $font;
+  text-transform: uppercase;
+}
+
+// Subheadings (h3)
+%subHeaderText {
+  color: $black;
+  font-family: $font-bold;
+  font-size: 20px;
+}
+
+// Tags
+%tag {
+  border-radius: 5px;
+  color: $white;
+  font: 14px $font-bold;
+  padding: 3px 15px;
+  text-transform: uppercase;
+}
+
+// Text (p, etc.)
+%text {
+  color: $black;
+  font-family: $font;
+  font-size: 15px;
+}

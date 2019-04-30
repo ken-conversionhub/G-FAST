@@ -1,0 +1,2336 @@
+@import "fonts";
+@import "variables";
+@import "keyframes";
+@import "z-index";
+
+@import "nice-select";
+
+// # HTML Elements
+
+body {
+  color: $black;
+  font-family: $font;
+  margin: 0;
+}
+
+h1 {
+  @extend %headerText;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+h2 {
+  @extend %headerText;
+  margin: 0;
+}
+h3 {
+  @extend %subHeaderText;
+  margin: 0 15px 0 0;
+}
+
+ul {
+  margin: 0;
+  list-style-type: none;
+  padding-left: 0;
+}
+
+div,
+section,
+article,
+aside,
+small,
+input {
+  box-sizing: border-box;
+}
+
+input,
+input:focus {
+  outline: none;
+}
+
+a {
+  color: $red;
+  transition: all 0.3s ease;
+  outline: none;
+  text-decoration: none;
+
+  &:hover {
+    color: $crimson;
+    text-decoration: none;
+  }
+}
+
+a:focus {
+  outline: none;
+}
+
+// Universal Page Elements
+
+.overlay {
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+// Mobile Search
+
+.mobile-search {
+  background: $headerGray;
+  left: 0;
+  min-height: 100%;
+  opacity: 0;
+  padding: 25px;
+  position: fixed;
+  top: -100%;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.mobile-search-container {
+  @extend %flex;
+  @extend %flexDefault;
+}
+
+.mobile-search .close-mobile-search {
+  cursor: pointer;
+
+  i {
+    color: #fff;
+    font-size: 26px;
+  }
+}
+
+.mobile-search-form {
+  @include flex-basis(60%);
+  position: relative;
+
+  input[type="search"] {
+    @extend %text;
+    border: $borderGray 1px solid;
+    border-radius: 5px;
+    padding: 10px 20px;
+    width: 100%;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+
+    i {
+      color: $red;
+      transition: all 0.3s ease;
+    }
+
+    &:hover i {
+      color: $crimson;
+    }
+  }
+}
+
+// Mobile Navigation
+
+.mobile-nav {
+  background: $bgGray;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: scroll;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.mobile-admin {
+  background: $headerGray;
+  padding: 20px 30px;
+
+  .content {
+    @extend %flex;
+    @extend %flexDefault;
+  }
+
+  .mobile-user {
+    @extend %flex;
+    @extend %flexDefault;
+    
+    .admin {
+      padding-left: 10px;
+
+      .admin-user {
+        color: #fff;
+        font: 16px $font-bold;
+      }
+      small {
+        color: rgba(255, 255, 255, 0.5);
+        font: 12px $font;
+      }
+    }
+  }
+
+  .close-btn {
+    cursor: pointer;
+
+    i {
+      color: #fff;
+      font-size: 36px;
+    }
+  }
+}
+
+.mobile-menu {
+  background: $bgGray;
+  padding: 50px 30px 120px;
+
+  li {
+    margin-bottom: 25px;
+
+    a {
+      color: $black;
+      display: flex;
+      font: 18px $font-bold;
+      justify-content: space-between;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+    
+    &.active a {
+      color: $red;
+    }
+  }
+}
+
+.switch-account {
+  background: $mobileWhite;
+  padding: 20px 30px;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  a {
+    color: $green;
+    font: 18px $font;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-decoration: none;
+    text-transform: uppercase;
+  }
+
+  small {
+    color: $black;
+    font: 16px $font;
+  }
+}
+
+.sign-out {
+  background: $headerGray;
+
+  .content {
+    @extend %flex;
+    @extend %flexDefault;
+    padding: 20px 30px;
+
+    .sign-out-link a {
+      color: #fff;
+      font: 18px $font;
+      font-weight: bold;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+/* Site Header */
+
+// Top Header
+
+.top-header {
+  background: $topHeaderGray;
+
+  .content {
+    @extend %flex;
+    align-items: center;
+    padding: 5px 0;
+
+    img {
+      padding-right: 10px;
+    }
+
+    .subhead {
+      color: $bluishGray;
+      font: 15px $font;
+    }
+  }
+}
+
+.masthead {
+  background: $headerGray;
+
+  .content {
+    @extend %flex;
+    @extend %flexDefault;
+    padding: 10px 0;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  .masthead-search {
+    @include flex-basis(60%);
+    position: relative;
+
+    input[type="search"] {
+      @extend %text;
+      border: $borderGray 1px solid;
+      border-radius: 5px;
+      padding: 10px 20px;
+      width: 100%;
+    }
+
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 18px;
+      padding: 0;
+      position: absolute;
+      right: 10px;
+      top: calc(100% / 4);
+
+      i {
+        color: $red;
+        transition: all 0.3s ease;
+      }
+
+      &:hover i {
+        color: $crimson;
+      }
+    }
+  }
+}
+
+// Mobile Header
+
+.mobile-header {
+  background: $red;
+  display: none;
+
+  .content {
+    display: flex;
+    @extend %flexDefault;
+    padding: 20px 0;
+  }
+
+  .burger i,
+  .search i {
+    color: #fff;
+    font-size: 22px;
+  }
+}
+
+:root .mobile-header-not-at-top {
+  --nav-height: 0;
+}
+
+.mobile-header-not-at-top {
+  padding-top: 0;
+}
+
+// Main Navigation & Site Menu
+
+.main-nav {
+  background: $red;
+  border-top: $crimson 1px solid;
+  padding: 10px;
+}
+
+.main-nav .container {
+  max-width: 1180px;
+}
+
+.main-nav .content {
+  @extend %flex;
+  @extend %flexDefault;
+}
+
+.site-menu {
+  @extend %flex;
+  @extend %flexDefault;
+}
+
+.site-menu > li {
+  padding: 0 10px;
+  position: relative;
+}
+
+.site-menu > li.active > a {
+  background: $crimson;
+}
+
+.site-menu > li > a {
+  @extend %flex;
+  align-items: center;
+  border-radius: 5px;
+  color: #fff;
+  font: 18px $font-medium;
+  padding: 10px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.site-menu > li > a:hover {
+  background: $crimson;
+}
+
+.site-menu > li > a i {
+  font-size: 12px;
+  padding-left: 5px;
+}
+
+.site-menu.active > li > a {
+  background: $crimson;
+}
+
+.site-menu:first-child {
+  padding-left: 0;
+}
+
+.site-menu:last-child {
+  padding-right: 0;
+}
+
+// Site Menu Dropdowns
+
+.site-menu-dropdown {
+  @extend %dropdown;
+  left: 0;
+  top: 100%;
+}
+
+.site-menu-dropdown ul {
+  @extend %dropdownContainer;
+}
+
+.site-menu-dropdown ul::before {
+  @extend %dropdownTriangle;
+  left: 30px;
+}
+
+.site-menu-dropdown a {
+  color: $black;
+  display: block;
+  font: 16px $font;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.site-menu-dropdown a:hover {
+  background: $borderGray;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.site-menu li:hover .site-menu-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+// Header not at top
+
+:root .header-not-at-top {
+  --nav-height: 70px;
+}
+
+.header-not-at-top {
+  padding-top: 60px;
+
+  .main-nav {
+    animation: moveDown 0.3s forwards;
+    border-top: none;
+    box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+    left: 0;
+    position: fixed;
+    top: 0;
+    transform: translateY(-60px);
+    width: 100%;
+  }
+}
+
+// User Tools
+
+.user-tools {
+  @extend %flex;
+  align-items: center;
+  padding-right: 10px;
+}
+
+.user-tools > li {
+  padding: 0 10px;
+  position: relative;
+}
+
+.user-tools > li > a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.user-tools > li > a > i {
+  font-size: 22px;
+  transition: all 0.3s ease;
+}
+
+.user-tools > li > a > i:hover {
+  color: $borderLightRed;
+}
+
+.user-tools > li.notifications > a {
+  @extend %flex;
+  position: relative;
+}
+
+.user-tools .circle {
+  align-items: center;
+  background: #34b95f;
+  border-radius: 50%;
+  display: flex;
+  font: 12px $font-bold;
+  height: 20px;
+  justify-content: center;
+  padding: 3px;
+  position: absolute;
+  right: -10px;
+  top: 0;
+  width: 20px;
+}
+
+.admin-panel > a {
+  @extend %flex;
+  align-items: center;
+}
+
+.admin-panel .admin {
+  padding-left: 10px;
+}
+
+.admin-panel .admin-user {
+  color: #fff;
+  font: 16px $font-bold;
+}
+
+.admin-panel small {
+  color: rgba(255, 255, 255, 0.5);
+  font: 12px $font;
+}
+
+// User Tool Dropdowns
+
+.user-tool-dropdown {
+  @extend %dropdown;
+  top: 40px;
+  right: -10px;
+}
+
+.tool-dropdown-container {
+  @extend %dropdownContainer;
+}
+
+.tool-dropdown-container::before {
+  @extend %dropdownTriangle;
+  right: 20px;
+}
+
+.user-tool-dropdown h4 {
+  color: $red;
+  display: block;
+  font: 17px $font-bold;
+  margin-top: 0;
+  margin-bottom: 15px;
+}
+
+.user-tool-dropdown p {
+  color: $black;
+  font: 15px $font;
+  line-height: 1.5em;
+  margin: 0;
+}
+
+.user-tools li:hover .user-tool-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.user-tool-dropdown.hidden {
+  opacity: 0 !important;
+  visibility: hidden !important;
+}
+
+.user-tool-dropdown.shown {
+  opacity: 1;
+  visibility: visible;
+}
+
+// Admin Panel Dropdowns
+
+.admin-panel-dropdown {
+  @extend %dropdown;
+  right: 0;
+  top: 45px;
+}
+
+.panel-dropdown-container {
+  position: relative;
+}
+
+.panel-dropdown-container::before {
+  @extend %dropdownTriangle;
+  right: 30px;
+}
+
+.admin-nav {
+  @extend %dropdownContainer;
+}
+
+.admin-nav a {
+  color: $black;
+  display: block;
+  font: 16px $font;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.admin-nav a:hover {
+  background: $borderGray;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.admin-panel:hover .admin-panel-dropdown {
+  visibility: visible;
+  opacity: 1;
+}
+
+.admin-switch-account {
+  background: $mobileWhite;
+  padding: 20px 30px;
+}
+
+.admin-switch-account > a {
+  color: $green;
+  font: 16px $font-bold;
+}
+
+.admin-switch-account > a:hover {
+  color: green;
+}
+
+.admin-switch-account > small {
+  color: $black;
+  display: block;
+  font: 15px $font;
+  margin-top: 10px;
+}
+
+// Notifications Dropdown
+
+.notifications-content {
+  background: $white;
+  border: 1px solid $borderGray;
+  border-radius: 5px;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+  min-width: 350px;
+  position: absolute;
+  right: -30px;
+  top: 45px;
+  transition: all 0.3s ease;
+}
+
+.notifications-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.notifications-content.shown {
+  opacity: 1;
+  visibility: true;
+}
+
+.notifications-content::before {
+  @extend %dropdownTriangle;
+  right: 35px;
+}
+
+.notif {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 20px 20px 0 20px;
+  transition: all 0.3s ease;
+}
+
+.notif.read {
+  background: $bgGray;
+}
+
+.notif.unread {
+  background: $white;
+}
+
+.notif.unread > i {
+  color: $red;
+}
+
+.notif.read > i {
+  color: $headerGray;
+}
+
+.notif-text {
+  border-bottom: $borderGray 1px solid;
+  padding: 0 0 20px 15px;
+}
+
+.notif:last-child .notif-text {
+  border-bottom: none;
+}
+
+.notif-text p {
+  color: $black;
+  font: 15px $font;
+  line-height: 1.5em;
+  margin: 0 0 15px 0;
+  transition: all 0.3s ease;
+}
+
+.notif-text small {
+  font-size: 12px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.notif:hover {
+  cursor: pointer;
+}
+
+.notif:hover .notif-text p,
+.notif:hover .notif-text small {
+  color: $red;
+}
+
+// Home Page
+
+.homepage {
+  background: $bgGray;
+}
+.padded-section {
+  padding: 70px 0;
+}
+
+.welcome {
+  @extend %flex;
+  @extend %flexDefault;
+  @extend %grayBorders;
+  background: url(../img/welcome-banner.jpg) no-repeat center center / cover;
+  margin-bottom: 30px;
+  padding: 40px;
+  
+  h1 {
+    text-transform: none;
+  }
+
+  small {
+    color: $red;
+    font: 13px $font;
+    text-transform: uppercase;
+
+    i {
+      color: $red;
+      font-size: 16px;
+      margin-right: 5px;
+    }
+  }
+}
+
+.links-and-reports {
+  @extend %flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .frame {
+    @extend %grayBorders;
+    background: #fff;
+    margin-bottom: 20px;
+    padding: 40px;
+    text-align: center;
+    width: 45%;
+  }
+
+  h2 {
+    padding-bottom: 25px;
+  }
+
+  .tile-wrapper {
+    @extend %flex;
+    justify-content: space-between;
+  }
+
+  .tile-link {
+    margin-bottom: 20px;
+    text-decoration: none;
+    width: 28%;
+
+    .tile {
+      border: $borderGray 1px solid;
+      border-radius: 5px;
+      display: flex;
+      justify-content: center;
+      margin: 0 auto 10px;
+      max-width: 90px;
+      padding: 25px 20px;
+      transition: all 0.3s ease;
+
+      i {
+        color: $footerGray;
+        font-size: 40px;
+        transition: all 0.3s ease;
+      }
+    }
+    
+    small {
+      color: $black;
+      display: inline-block;
+      font: 14px $font-medium;
+      max-width: 90px;
+      transition: all 0.3s ease;
+    }
+    
+    &:hover .tile {
+      background: $scarlet;
+      border-color: $red;
+
+      i {
+        color: $red;
+      }
+    }
+
+    &:hover small {
+      color: $red;
+    }
+  }
+
+}
+
+.customize-links {
+  @extend %flex;
+  align-items: stretch;
+  justify-content: space-between;
+
+  .red-link {
+    @extend %flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    a {
+      @extend %redLink;
+      @extend %flex;
+      text-decoration: none;
+    
+      i {
+        display: inline-block;
+        font-size: 18px;
+        margin-left: 10px;
+      }
+    
+      &:hover {
+        color: $crimson;
+      }
+    }
+  }
+}
+
+.customize-links-mobile {
+  display: none;
+}
+
+// Home Section 2: Pending Tasks
+
+.pending-task {
+  background: url(../img/pending-task-bg.jpg) no-repeat left top / cover;
+}
+
+.feed-heading {
+  @extend %flex;
+  @extend %flexDefault;
+  margin-bottom: 40px;
+
+  .feed-title {
+    @extend %flex;
+    align-items: center;
+
+    h2 {
+      margin-right: 10px;
+    }
+    
+    i {
+      font-size: 20px;
+      opacity: 0.5;
+      transition: all 0.3s ease;
+
+      &:hover {
+        opacity: 1;
+      }
+    }
+  }
+  
+  .view-more a {
+    @extend %redLink;
+  }
+}
+
+.feed article {
+  @extend %flex;
+  @extend %grayBorders;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 35px;
+  width: 100%;
+}
+
+.feed .avatar {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.feed .circle {
+  align-items: center;
+  background: $scarlet;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 85px;
+  width: 85px;
+}
+
+.feed .details {
+  flex: 8;
+  padding-right: 20px;  
+}
+
+.feed .details .task-header {
+  @extend %flex;
+
+  h3 {
+    margin-bottom: 3px;
+  }
+
+  .tag {
+    @extend %tag;
+    background: $green;
+    margin-bottom: 5px;
+  }
+}
+
+.feed .details small {
+  @extend %smallText;
+  display: block;
+  margin-bottom: 15px;
+}
+
+.feed .details p {
+  @extend %text;
+  margin: 0;
+
+  a:hover {
+    color: $crimson;
+  }
+}
+
+.feed .white-button-container {
+  display: flex;
+  justify-content: flex-end;
+  flex: 3;
+}
+
+.latest-updates {
+  background: $bgGray;
+}
+
+// Site Footer
+
+.site-footer {
+  background: url('../img/footer-banner.jpg') center bottom / cover;
+  padding: 35px 0;
+
+  .content {
+    @extend %flex;
+    @extend %flexDefault;
+  }
+
+  .footer-logo {
+    @extend %flex;
+    align-items: center;
+
+    img {
+      margin-right: 10px;
+    }
+  }
+  .footer-nav {
+
+    ul {
+      @extend %flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      li {
+        padding-left: 20px;
+
+        a {
+          @extend %footerLink;
+        }
+      }
+    }
+  }
+}
+
+// Copyright Footer
+
+.copyright-footer {
+  background: $black;
+  padding: 30px 0;
+
+  .content {
+    @extend %flex;
+    @extend %flexDefault;
+  }
+
+  .copyright-nav {
+
+    ul {
+      @extend %flex;
+      align-items: center;
+      justify-content: flex-end;
+
+      li {
+        padding-right: 30px;
+
+        a {
+          @extend %footerLink;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    color: $white;
+    font: 18px $font;
+  }
+}
+
+// View Payments Page
+
+.page-title .container {
+  @extend %flex;
+  @extend %flexDefault;
+  margin-bottom: 30px;
+}
+
+.view-payments-page {
+  background: $bgGray;
+}
+
+// Breadcrumbs
+
+.breadcrumbs {
+  margin-top: 10px;
+}
+
+.breadcrumbs > ul {
+  @extend %flex;
+}
+
+.breadcrumbs > ul > li {
+  padding-right: 10px;
+}
+
+.breadcrumbs > ul > li > a {
+  display: inline-block;
+  font: 15px $font;
+  padding-right: 10px;
+}
+
+.breadcrumbs > ul > li::after {
+  content: ">";
+}
+
+.breadcrumbs > ul > li:last-child::after {
+  content: "";
+}
+
+// Red Buttons
+
+.red-button {
+  background: $red;
+  border: 2px solid $red;
+  border-radius: 5px;
+  color: $white;
+  display: inline-block;
+  font: 14px $font-bold;
+  padding: 15px 20px;
+  min-width: 100px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.red-button:hover {
+  background: $white;
+  border: 2px solid $red;
+  color: $red;
+  cursor: pointer;
+}
+
+// White Buttons
+
+.white-button {
+  background: $white;
+  border: 2px solid $red;
+  border-radius: 5px;
+  color: $red;
+  display: inline-block;
+  font: 14px $font-bold;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.white-button:hover {
+  background: $red;
+  border: 2px solid $red;
+  color: $white;
+  cursor: pointer;
+}
+
+// Frame Containers
+
+.frame-container {
+  background: $white;
+  border: $borderGray 1px solid;
+  border-top: $red 5px solid;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+
+.frame-container:last-child {
+  margin-bottom: 0;
+}
+
+// Payment Listing Tabs
+
+.payment-listing-tab {
+  border: 1px solid $borderGray;
+  padding: 0 30px;
+}
+
+.payment-slick {
+  position: relative;
+}
+
+.payment-slick .slick-prev {
+  position: absolute;
+  left: -20px;
+  top: 15px;
+}
+
+.payment-slick .slick-next {
+  position: absolute;
+  right: -20px;
+  top: 15px;
+}
+
+.payment-listing-tab > ul {
+  @extend %flex;
+}
+
+.payment-listing-tab > ul > li > a {
+  @extend %flex;
+  align-items: center;
+  color: $black;
+  font: 15px $font;
+  padding: 20px 25px;
+  transition: none;
+}
+
+.payment-listing-tab > ul > li.active > a,
+.payment-listing-tab > ul > li:hover > a {
+  border-bottom: $red 3px solid;
+  color: $red;
+}
+
+.payment-listing-tab > ul > li > a > small {
+  background: #e5e5e5;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  font: 12px $font-medium;
+  height: 20px;
+  margin-left: 10px;
+  padding: 3px;
+  text-align: center;
+  width: 20px;
+}
+
+.payment-listing-tab > ul > li.active > a > small,
+.payment-listing-tab > ul > li:hover > a > small {
+  background: $scarlet;
+  color: $red;
+}
+
+// Frame Container Content
+
+.frame-container .content {
+  padding: 60px 60px 30px;
+}
+
+.frame-container h2 {
+  font: 35px $font;
+  margin-bottom: 30px;
+}
+
+// Payment Listings Content
+
+.payment-listings .tab-content {
+  display: block;
+}
+
+.payment-listings .tab-content.hidden {
+  display: none;
+}
+
+.payment-listing-options {
+  @extend %flex;
+  @extend %flexDefault;
+  margin-bottom: 30px;
+}
+
+.payment-listing-search-form {
+  @include flex-basis(40%);
+  position: relative;
+
+  input[type="search"] {
+    @extend %text;
+    border: $borderGray 1px solid;
+    border-radius: 5px;
+    padding: 20px 20px;
+    width: 100%;
+  }
+
+  button {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 20px;
+
+    i {
+      color: $red;
+      transition: all 0.3s ease;
+    }
+
+    &:hover i {
+      color: $crimson;
+    }
+  }
+}
+
+.other-options {
+  display: flex;
+  // @include flex-basis(60%);
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.actions-dropdown {
+  margin-right: 15px;
+  height: 52px;
+  line-height: 52px;
+}
+
+// Table of Payment Listings
+
+.gray-table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+}
+
+.gray-table thead {
+  background: $bgGray;
+}
+
+.gray-table th {
+  border-bottom: 1px solid $borderGray;
+  color: $black;
+  font: 14px $font;
+  padding: 10px 15px;
+  text-align: left;
+}
+
+.gray-table th:first-child {
+  border-top-left-radius: 5px;
+}
+
+.gray-table th:last-child {
+  border-top-right-radius: 5px;
+}
+
+.gray-table tbody tr {
+  border: 1px solid $borderGray;
+  border-top: none;
+}
+
+.gray-table td {
+  color: $black;
+  font: 14px $font;
+  padding: 20px 15px;
+  text-align: left;
+}
+
+.payment-listings-table td:nth-child(3),
+.payment-listings-table td:nth-child(4) {
+  color: $red;
+}
+
+.gray-table input[type=checkbox] {
+  visibility: hidden;
+}
+
+.gray-table .tag {
+  @extend %tag;
+  display: inline-block;
+  font: 12px $font-bold;
+  text-align: center;
+}
+
+.gray-table .tag.paid {
+  background: $green;
+}
+
+.gray-table .tag.pending {
+  background: $orange
+}
+
+.custom-checkbox {
+  width: 20px;
+  position: relative;
+}
+
+.custom-checkbox label {
+  cursor: pointer;
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  top: 0;
+  left: 0;
+  background: none;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.custom-checkbox label:after {
+  background: transparent;
+  border: 2px solid $white;
+  border-top: none;
+  border-right: none;
+  content: '';
+  height: 5px;
+  left: 4px;
+  opacity: 0;
+  position: absolute;
+  top: 4px;
+  transform: rotate(-45deg);
+  width: 9px;
+}
+
+.custom-checkbox input[type=checkbox]:checked + label {
+  background: $red;
+}
+
+.custom-checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+// New Payments Page
+
+.new-payments-page {
+  background: $bgGray;
+}
+
+// Standard Form
+
+.standard-form label {
+  color: $black;
+  display: block;
+  font: 20px $font-medium;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+}
+
+.standard-form .form-section {
+  margin-bottom: 20px;
+  max-width: 350px;
+  position: relative;
+}
+
+.form-section-bottom {
+  @extend %flex;
+  @extend %flexDefault;
+}
+
+.total {
+  @extend %flex;
+}
+
+.total-text,
+.total-value {
+  background: $scarlet;
+  color: $red;
+  font: 15px $font-bold;
+  padding: 20px 30px;
+  text-transform: uppercase;
+}
+
+.total-text {
+  border-radius: 5px 0 0 5px;
+}
+.total-value {
+  border-radius: 0 5px 5px 0;
+}
+
+.standard-form input[type=text],
+.standard-form input[type=search] {
+  @extend %text;
+  border: $borderGray 2px solid;
+  border-radius: 5px;
+  padding: 10px 20px;
+  width: 100%;
+}
+
+.standard-form .nice-select {
+  border: $borderGray 2px solid;
+  display: block;
+  float: none;
+  font-size: 15px;
+  width: 100%;
+}
+
+.standard-form .red-button {
+  width: auto;
+}
+
+.standard-form .floating-button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 18px;
+  padding: 0;
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.standard-form .floating-button i {
+  color: $red;
+  transition: all 0.3s ease;
+}
+
+.standard-form .floating-button:hover i {
+  color: $crimson;
+}
+
+.form-table {
+  margin-top: 5px;
+}
+
+.standard-input-table {
+  border-collapse: collapse;
+  margin-bottom: 20px;
+  width: 95%;
+}
+
+.standard-input-table th {
+  background: $bgGray;
+  border: 1px solid $borderGray;
+  color: $black;
+  font: 15px $font;
+  padding: 25px 15px;
+  text-align: left;
+}
+
+.standard-input-table td {
+  background: $white;
+  border: 1px solid $borderGray;
+  color: $black;
+  font: 15px $font;
+  padding: 10px 10px 10px 0;
+  position: relative;
+  text-align: left;
+}
+
+.standard-input-table tbody tr td:nth-of-type(4)::after {
+  background: $scarlet;
+  border-radius: 50%;
+  box-sizing: border-box;
+  content: "×";
+  color: $red;
+  cursor: pointer;
+  display: block;
+  font: 20px $font-bold;
+  height: 25px;
+  right: -50px;
+  position: absolute;
+  top: 20px;
+  text-align: center;
+  width: 25px;
+}
+
+.standard-input-table td:nth-of-type(1) { width: 35%; }
+.standard-input-table td:nth-of-type(2) { width: 35%; }
+.standard-input-table td:nth-of-type(3) { width: 15%; }
+.standard-input-table td:nth-of-type(4) { width: 15%; }
+
+.standard-input-table td input[type=text],
+.standard-input-table td .nice-select {
+  border: none;
+}
+
+.standard-input-table .amount {
+  display: inline-block;
+  padding: 10px 15px;
+}
+
+.form-section-bottom .button .white-button {
+  margin-right: 5px;
+}
+
+.standard-form .attachments {
+  @extend %flex;
+  align-items: center;
+  border: 1px $red dashed;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+
+.standard-form .attachments a {
+  display: block;
+  height: 100%;
+  padding: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+// STEPS CSS
+
+.steps {
+  @extend %flex;
+}
+
+.step-column {
+  text-align: center;
+  position: relative;
+  width: 25%;
+}
+
+.step-column::before {
+  background: url('../img/step-border.png') repeat-x left top;
+  content: " ";
+  display: block;
+  height: 3px;
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  width: 100%;
+  z-index: 1;
+}
+
+.step-column:last-child::before {
+  content: none;
+}
+
+.steps .circle {
+  align-items: center;
+  background: $white;
+  border: 3px solid $red;
+  border-radius: 50%;
+  color: $red;
+  display: flex;
+  height: 50px;
+  justify-content: center;
+  margin: 0 auto 15px;
+  position: relative;
+  width: 50px;
+  z-index: 10;
+}
+
+.steps .circle.active {
+  background: $red;
+  border: 3px solid $white;
+  color: $white;
+}
+
+.steps .circle span {
+  font: 20px $font-bold;
+}
+
+.steps h4 {
+  color: $black;
+  font: 17px $font-bold;
+  padding: 0 30px;
+  text-transform: uppercase;
+}
+
+// Bank Reconciliation
+
+.bank-reconciliation h2 {
+  font: 35px $font;
+  margin-bottom: 0;
+  padding-right: 20px;
+  text-transform: none;
+}
+
+.bank-header {
+  @extend %flex;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.bank-header .tag {
+  @extend %tag;
+  background: $orange;
+  display: inline-block;
+}
+
+.steps-frame {
+  border: 1px solid $borderGray;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 30px;
+  // max-width: 100%;
+  padding: 30px;
+}
+
+.step-frame-row {
+  @extend %flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.step-frame-row .step-left {
+  color: $red;
+  font: 17px $font-bold;
+  width: 20%;
+}
+
+.step-frame-row .step-text {
+  color: $black;
+  font: 15px $font;
+  width: 80%;
+}
+
+// Transaction
+
+.transaction-header {
+  @extend %flex;
+  @extend %flexDefault;
+}
+
+.transaction-header h2 {
+  font: 25px $font;
+  margin-bottom: 30px;
+}
+
+.transaction {
+  @extend %flex;
+  align-items: stretch;
+  justify-content: space-between;
+  margin-bottom: 30px;
+}
+
+.transaction:last-child {
+  margin-bottom: 0;
+}
+
+.transaction h3.mobile-only,
+.transaction .custom-checkbox.mobile-only {
+  display: none;
+}
+
+.transaction .bank-statements {
+  width: 45%;
+}
+
+.transaction .bank-entry-amount {
+  width: 45%;
+}
+
+.transaction .bank-entry-amount .bank-entry-inner {
+  @extend %flex;
+  @extend %flexDefault;
+  background: $bgGray;
+  padding: 25px;
+}
+
+.transaction .bank-entry-amount:first-child {
+  padding-right: 15px;
+}
+
+.transaction .bank-entry-amount:last-child {
+  padding-left: 15px;
+}
+
+.transaction .match-buttons {
+  width: 10%;
+}
+
+.transaction .gfast-entries {
+  width: 45%;
+}
+
+.transaction .bank-entry-text {
+  color: rgba(0, 0, 0, 0.5);
+  font: 15px $font;
+  width: 50%;
+}
+.transaction .back-entry-total {
+  color: $black;
+  font: 30px $font-bold;
+  text-align: right;
+  width: 50%;
+}
+
+.transaction .missing-entry-container {
+  background: $bgGray;
+  border: 1px solid $borderGray;
+  border-radius: 5px;
+  padding: 40px;
+  text-align: center;
+}
+
+.transaction .missing-entry-container p {
+  color: rgba(0, 0, 0, 0.5);
+  font: 15px $font;
+  margin-top: 0;
+}
+
+.green-button {
+  background: #46be6d;
+  border: 2px solid #3daf62;
+  border-radius: 5px;
+  color: $white;
+  display: block;
+  font: 14px $font-bold;
+  margin: 0 auto;
+  max-width: 150px;
+  padding: 10px 25px;
+  text-transform: uppercase;
+}
+
+.green-button:hover {
+  background: #63d187;
+  color: #fff;
+}
+
+.transaction-table {
+  // border-collapse: collapse;
+  border-spacing: 0;
+  border-radius: 5px;
+  height: 100%;
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+.transaction-table.active {
+  border: 1px solid $red;
+}
+
+.transaction-table th {
+  background: $bgGray;
+  border: 1px solid $borderGray;
+  color: $black;
+  font: 15px $font;
+  padding: 25px 15px;
+  text-align: left;
+}
+
+.transaction-table.active th {
+  background: $scarlet;
+  border: 1px solid $borderGray;
+}
+
+.transaction-table td {
+  background: $white;
+  border: 1px solid $borderGray;
+  color: #636363;
+  font: 15px $font;
+  padding: 20px 15px 0;
+  position: relative;
+  text-align: left;
+  vertical-align: top;
+}
+
+.transaction-table.active td {
+  background: $scarlet;
+  border: 1px solid $borderGray;
+}
+
+.bank-statements {
+  padding-right: 15px;
+}
+
+.match-buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.gfast-entries {
+  padding-left: 15px;
+}
+
+.match-buttons .match {
+  background: #fff;
+  border: 2px solid $green;
+  border-radius: 5px;
+  color: $green;
+  cursor: pointer;
+  display: inline-block;
+  font: 15px $font-bold;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.match-buttons .match:hover {
+  background: $green;
+  color: $white;
+}
+
+.match-buttons .mismatch {
+  background: #fff;
+  border: 2px solid $red;
+  border-radius: 5px;
+  color: $red;
+  cursor: pointer;
+  display: inline-block;
+  font: 15px $font-bold;
+  margin-bottom: 15px;
+  padding: 15px 20px;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
+}
+
+.match-buttons .mismatch:hover {
+  background: $red;
+  color: $white;
+}
+
+.buttons-footer {
+  background: #fff;
+  border: $borderGray 1px solid;
+  border-radius: 5px;
+}
+
+.buttons-footer .content {
+  @extend %flex;
+  @extend %flexDefault;
+  padding: 30px 60px;
+}
+
+.buttons-footer p {
+  color: $black;
+  font: 15px $font-bold;
+  text-transform: uppercase;
+}
+
+.buttons-footer .white-button {
+  margin-right: 5px;
+}
+
+.check-buttons input[type=checkbox] {
+  visibility: hidden;
+}
+
+.check-buttons {
+  @extend %flex;
+  @extend %flexDefault;
+  width: 10%;
+}
+
+// Gray frame
+
+.gray-container {
+  @extend %flex;
+  @extend %flexDefault;
+  background: $bgGray;
+  border: 2px solid $borderGray;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  padding: 15px 30px;
+  width: 100%;
+}
+
+.gray-section {
+  @extend %flex;
+  @extend %flexDefault;
+  background: $bgGray;
+  border: 2px solid $borderGray;
+  border-radius: 0 0 5px 5px;
+  padding: 15px 30px;
+  width: 100%;
+}
+
+.gray-text {
+  color: rgba(0, 0, 0, 0.5);
+  font: 15px $font;
+}
+
+.gray-total {
+  color: $black;
+  font: 30px $font-bold;
+}
+
+.statement-container {
+  margin-bottom: 30px;
+}
+
+.statement-container .white-section {
+  border: 2px solid $borderGray;
+  border-bottom: none;
+  border-radius: 5px 5px 0 0;
+  padding: 30px;
+}
+
+.statement-container .white-section h3 {
+  font: 20px $font-bold;
+  margin-bottom: 30px;
+  text-transform: uppercase;
+}
+
+.bank-statement-table {
+  padding-bottom: 30px;
+  width: 100%;
+}
+
+.bank-statement-table th {
+  color: $black;
+  font: 15px $font;
+  padding: 10px 0;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.bank-statement-table td {
+  color: rgba(0, 0, 0, 0.5);
+  font: 15px $font;
+  padding: 5px 0;
+  text-align: left;
+}
+
+// Notifications
+
+.notifications-page {
+  background: $bgGray;
+}
+
+// Notifications Tabs
+
+.notifications-tab {
+  border-bottom: 1px solid $borderGray;
+  margin: 0 30px;
+}
+
+.notifications-slick {
+  position: relative;
+}
+
+.notifications-slick .slick-prev {
+  position: absolute;
+  left: -20px;
+  top: 15px;
+}
+
+.notifications-slick .slick-next {
+  position: absolute;
+  right: -20px;
+  top: 15px;
+}
+
+.notifications-tab > ul {
+  @extend %flex;
+}
+
+.notifications-tab > ul > li > a {
+  @extend %flex;
+  align-items: center;
+  color: $black;
+  font: 15px $font;
+  padding: 30px 25px;
+  transition: none;
+}
+
+.notifications-tab > ul > li.active > a,
+.notifications-tab > ul > li:hover > a {
+  border-bottom: $red 3px solid;
+  color: $red;
+}
+
+.notifications-tab > ul > li > a > small {
+  background: #e5e5e5;
+  border-radius: 50%;
+  color: rgba(0, 0, 0, 0.5);
+  display: inline-block;
+  font: 12px $font-medium;
+  height: 20px;
+  margin-left: 10px;
+  padding: 3px;
+  text-align: center;
+  width: 20px;
+}
+
+.notifications-tab > ul > li.active > a > small,
+.notifications-tab > ul > li:hover > a > small {
+  background: $scarlet;
+  color: $red;
+}
+
+// Notifications Content
+
+.notification-container .content {
+  padding: 30px;
+}
+
+.task-notif {
+  @extend %flex;
+  border: 2px solid $borderGray;
+  border-radius: 10px;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 35px;
+  width: 100%;
+}
+
+.task-notif .avatar {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.task-notif .circle {
+  align-items: center;
+  background: $scarlet;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 85px;
+  width: 85px;
+}
+
+.task-notif .details {
+  flex: 8;
+  padding-right: 20px;  
+}
+
+.task-notif .details .task-header {
+  @extend %flex;
+  margin-bottom: 10px;
+
+  h3 {
+    font: 25px $font;
+    font-weight: bold;
+  }
+
+  .tag {
+    @extend %tag;
+    background: $green;
+    margin-bottom: 5px;
+  }
+}
+
+.task-notif .details small {
+  @extend %smallText;
+  display: block;
+  font: 15px $font;
+  margin-bottom: 15px;
+  text-transform: none;
+}
+
+.task-notif .details p {
+  @extend %text;
+  line-height: 1.5em;
+  margin: 0;
+
+  a:hover {
+    color: $crimson;
+  }
+}
+
+.task-notif .white-button-container {
+  display: flex;
+  justify-content: flex-end;
+  flex: 3;
+}
+
+// Status Update
+
+.status-update {
+  @extend %flex;
+  border: 2px solid $borderGray;
+  border-radius: 10px;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 35px;
+  width: 100%;
+}
+
+.status-update .avatar {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.status-update .details {
+  flex: 8;
+  padding-right: 20px;  
+}
+
+.status-update .details .task-header {
+  @extend %flex;
+  margin-bottom: 10px;
+
+  h3 {
+    font: 25px $font;
+    font-weight: bold;
+  }
+
+  .tag {
+    @extend %tag;
+    background: $green;
+    margin-bottom: 5px;
+  }
+}
+
+.status-update .details small {
+  @extend %smallText;
+  display: block;
+  font: 15px $font;
+  margin-bottom: 15px;
+  text-transform: none;
+}
+
+.status-update .details p {
+  @extend %text;
+  line-height: 1.5em;
+  margin: 0 0 15px;
+
+  a:hover {
+    color: $crimson;
+  }
+}
+
+.status-update .white-button-container {
+  display: flex;
+  justify-content: flex-end;
+  flex: 3;
+}
+
+// GRO 
+
+.gro-notif {
+  border: 2px solid $borderGray;
+  border-radius: 10px;
+  align-items: center;
+  background: #fff;
+  margin-bottom: 30px;
+  padding: 35px;
+  width: 100%;
+}
+
+.gro-notif .avatar {
+  flex: 1;
+  padding-right: 20px;
+}
+
+.gro-notif .circle {
+  align-items: center;
+  background: $scarlet;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  height: 85px;
+  width: 85px;
+}
+
+.gro-notif .details {
+  flex: 8;
+  padding-right: 20px;  
+}
+
+.gro-notif .details .task-header {
+  @extend %flex;
+  margin-bottom: 10px;
+
+  h3 {
+    font: 25px $font;
+    font-weight: bold;
+  }
+
+  .tag {
+    @extend %tag;
+    background: $green;
+    margin-bottom: 5px;
+  }
+}
+
+.gro-notif .details small {
+  @extend %smallText;
+  display: block;
+  font: 15px $font;
+  margin-bottom: 15px;
+  text-transform: none;
+}
+
+.gro-notif .details p {
+  @extend %text;
+  line-height: 1.5em;
+  margin: 0;
+
+  a:hover {
+    color: $crimson;
+  }
+}
+
+.gro-notif .white-button-container {
+  margin-top: 10px;
+}
+
+.notif-tab-content.hidden {
+  display: none;
+}
+
+.distribution-form h4 {
+  color: $black;
+  font: 20px $font-medium;
+}
+
+.two-columns {
+  @extend %flex;
+  color: #333333;
+  font: 15px $font;
+  margin: 15px 0 15px 30px;
+}
+
+.two-columns .left-col,
+.two-columns .right-col {
+  width: 25%;
+}
+
+.two-columns ul li {
+  padding-bottom: 20px;
+}
+
+.red-table {
+  @extend %flex;
+  @extend %flexDefault;
+  background: $scarlet;
+  color: $red;
+  font: 15px $font-bold;
+  margin: 30px 0;
+  max-width: 450px;
+  padding: 25px 30px;
+  text-transform: uppercase;
+}
+
+.red-table .right-col {
+  text-align: right;
+}
+
+.red-table ul li {
+  margin-bottom: 10px;
+}
+
+.red-table ul li:last-child {
+  margin-bottom: 0;
+}
+
+.movement-table td:first-child {
+  @extend %flex;
+}
+
+.movement-table .custom-checkbox {
+  margin-top: 12px;
+}
+
+.pagination {
+  @extend %flex;
+  align-items: center;
+  color: rgba(0, 0, 0, 0.5);
+  font: 15px $font;
+  justify-content: flex-end;
+  margin: 30px 0;
+}
+
+.pagination ul {
+  @extend %flex;
+}
+
+.pagination ul li {
+  margin: 0 5px;
+}
+
+.pagination ul li a {
+  @extend %grayBorders;
+  border-radius: 50%;
+  display: block;
+  height: 24px;
+  padding-top: 6px;
+  text-align: center;
+  text-decoration: none;
+  width: 30px;
+}
+
+.pagination ul li.active a {
+  background: $red;
+  border-color: $red;
+  color: $white;
+}
+
+.page-label {
+  margin-right: 5px;
+}
+
+@import "responsive";

@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO -->
+<meta name="author" content="Ken Samonte &lt;khsamonte@gmail.com&gt;">
+<meta  name="description" content="">
+<title>G-Fast Dashboard</title>
+
+<!-- Presentation -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="css/vendor/slick.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Structure -->
+<body>
+
+<!-- # Mobile Search -->
+<aside class="mobile-search">
+  
+  <div class="mobile-search-container">
+    <div class="close-mobile-search">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    
+    <form class="mobile-search-form">
+      <input type="search" name="masthead_search" placeholder="Search">
+      <button type="submit" name="masthead_submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </div>
+
+</aside>
+
+<!-- # Mobile Navigation # -->
+<aside class="mobile-nav">
+
+  <!-- ## Mobile Nav Header -->
+  <header class="mobile-admin">
+    <div class="content">
+      <div class="mobile-user">
+        <img src="img/lily-tan.png" alt="avatar">
+        <div class="admin">
+          <div class="admin-user">Lily Tan</div>
+          <small>AMK RC</small>
+        </div>
+      </div>
+
+      <div class="close-btn">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ## Mobile Nav Menu -->
+  <nav class="mobile-menu">
+    <ul>
+      <li class="active"><a href="#">Dashboard</a></li>
+      <li><a href="#">New Entries</a></li>
+      <li><a href="#">View Transactions</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- ## Mobile Switch Accounts -->
+  <div class="switch-account">
+    <div class="content">
+      <a href="">Switch Account</a>
+      <small>Currently signed in as AMK RC</small>
+    </div>
+  </div>
+
+  <!-- ## Mobile Sign Out -->
+  <footer class="sign-out">
+    <div class="content">
+      
+      <div class="sign-out-link">
+        <a href="">Sign Out</a>
+      </div>
+      
+      <ul class="user-tools">
+        <li class="notifications">
+          <a href="#">
+            <i class="fas fa-bell"></i>
+            <div class="circle">2</div>
+          </a>
+        </li>
+        <li class="settings">
+          <a href="#">
+            <i class="fas fa-cog"></i>
+          </a>
+        </li>
+        <li class="help">
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</aside>
+
+<!-- # Mobile Header # -->
+<header class="mobile-header" id="mobile-header">
+  <div class="container">
+    <div class="content">
+      <div class="burger">
+        <a href="#" class="open-mobile-nav"><i class="fas fa-bars"></i></a>
+      </div>
+      <div class="mobile-logo">
+        <img src="img/footer-text-logo.png" alt="G-Fast">
+      </div>
+      <div class="search">
+        <a href="#" class="open-mobile-search"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- # Desktop Header # -->
+<header class="main-header" id="main-header">
+
+  <!-- ## Topmost Header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="content">
+        <img src="img/merlion-icon.png" alt="Merlion">
+        <div class="subhead">A Singapore Government Agency Website</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ## Logo & Search Header -->
+  <div class="masthead">
+    <div class="container">
+      <div class="content">
+
+        <div class="logo">
+          <a href="#"><img src="img/site-logo.png" alt="G-Fast"></a>
+        </div>
+        <form class="masthead-search">
+          <input type="search" name="masthead_search" placeholder="Search">
+          <button type="submit" name="masthead_submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- # Desktop Navigation # -->
+<nav class="main-nav" id="main-nav">
+  <div class="container">
+    <div class="content">
+
+      <!-- ## Site Menu -->
+      <ul class="site-menu">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li>
+          <a href="#">New Entries <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">Create New Entry 1</a></li>
+              <li><a href="#">Create New Entry 2</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="#">View Transactions <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">View Transaction 1</a></li>
+              <li><a href="#">View Transaction 2</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="#">Banking <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">Banking 1</a></li>
+              <li><a href="#">Banking 2</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li><a href="#">Reports</a></li>
+      </ul>
+
+      <!-- ## User Tools -->
+      <ul class="user-tools">
+
+        <li class="notifications">
+          <a href="#" class="notifications-button">
+            <i class="fas fa-bell"></i>
+            <div class="circle">2</div>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Notifications</h4>
+              <p>Showing recent updates about your account.</p>
+            </div>
+          </div>
+          <div class="notifications-content hidden">
+            <div class="notif unread">
+              <i class="fas fa-bell"></i>
+              <div class="notif-text">
+                <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                <small>5 May 2018, 00:00 AM</small>
+              </div>
+            </div>
+            <div class="notif read">
+                <i class="fas fa-bell"></i>
+                <div class="notif-text">
+                  <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                  <small>5 May 2018, 00:00 AM</small>
+                </div>
+              </div>
+          </div>
+        </li>
+
+        <li class="settings">
+          <a href="#">
+            <i class="fas fa-cog"></i>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Settings</h4>
+              <p>Configure your account information, etc.</p>
+            </div>
+          </div>
+        </li>
+        <li class="help">
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Help & Support</h4>
+              <p>Get some help from our support.</p>
+            </div>
+          </div>
+        </li>
+        <li class="admin-panel">
+          <a href="#">
+            <img src="img/lily-tan.png" alt="avatar">
+            <div class="admin">
+              <div class="admin-user">Lily Tan</div>
+              <small>AMK RC</small>
+            </div>
+          </a>
+          <nav class="admin-panel-dropdown">
+            <div class="panel-dropdown-container">
+              <ul class="admin-nav">
+                <li><a href="#">User Profile</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+              <footer class="admin-switch-account">
+                <a href="#">Switch Account</a>
+                <small>AMK RC</small>
+              </footer>
+            </div>
+          </nav>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<section class="notifications-page padded-section">
+  <header class="page-title">
+    <div class="container">
+      
+      <div class="main-title">
+        <h1>Notifications</h1>
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </header>
+  
+  <div class="notifications-section">
+    
+    <div class="container">
+      <div class="frame-container">
+        <div class="notifications-tab">
+          <ul class="notifications-slick">
+            <li class="active"><a href="#" class="notif-tab your-task-tab">Your Task <small>3</small></a></li>
+            <li><a href="#" class="notif-tab status-tab">Status Updates <small>1</small></a></li>
+            <li><a href="#" class="notif-tab gro-tab">GRO Procurement Updates <small>3</small></a></li>
+          </ul>
+        </div>
+
+        <div class="notification-container">
+          <div class="content">
+
+            <div class="notif-tab-content your-task-content">
+
+              <article class="task-notif">
+                <div class="avatar">
+                  <div class="circle">
+                    <img src="img/task-icon.png" alt="Task">
+                  </div>
+                </div>
+                <div class="details">
+                  <header class="task-header">
+                    <h3>ITQ Pending Award</h3>
+                    <div class="tag">New</div>
+                  </header>
+                  <small>21 January 2019 at 5:50 PM</small>
+                  <p><a href="#">Professional Cleaning Services</a> has closed for bidding on 3 Feb 2019 with 3 Bids. Pending for your evaluation and award.</p>
+                </div>
+                <div class="white-button-container">
+                  <a href="#" class="white-button">View Bids to Award</a>
+                </div>
+              </article>
+
+              <article class="task-notif">
+                <div class="avatar">
+                  <div class="circle">
+                    <img src="img/task-icon.png" alt="Task">
+                  </div>
+                </div>
+                <div class="details">
+                  <header class="task-header">
+                    <h3>Approval required for ITQ Publishing</h3>
+                    <div class="tag">New</div>
+                  </header>
+                  <small>2 February 2019 at 2:00 PM</small>
+                  <p><a href="#">Lunch Reception for Bursary Award 2019</a> has been submitted on 2 Feb 2019 by Jasmine Lee Pending for your approval for publishing.</p>
+                </div>
+                <div class="white-button-container">
+                  <a href="#" class="white-button">View Approval Request</a>
+                </div>
+              </article>
+
+              <article class="task-notif">
+                <div class="avatar">
+                  <div class="circle">
+                    <img src="img/task-icon.png" alt="Task">
+                  </div>
+                </div>
+                <div class="details">
+                  <header class="task-header">
+                    <h3>ITQ ready to be published</h3>
+                    <div class="tag">New</div>
+                  </header>
+                  <small>2 February 2019 at 2:00 PM</small>
+                  <p><a href="#">Residents Appreciation Lunch 2019</a> is ready to be open for bids on 1 Feb 2019</p>
+                </div>
+                <div class="white-button-container">
+                  <a href="#" class="white-button">Manage Bids</a>
+                </div>
+              </article>
+
+            </div>
+
+            <div class="notif-tab-content status-content">
+                
+              <article class="status-update">
+                <div class="avatar">
+                  <img src="img/avatar-img3.png" alt="Avatar">
+                </div>
+                <div class="details">
+                  <header class="task-header">
+                    <div class="tag">New</div>
+                  </header>
+                  <p>Your Events Management Services for <a href="#">Racial Harmony Day 2019</a> has been created and submitted for approval to <a href="#">Amy Lee</a>.</p>
+                  <a href="#" class="white-button">View ITQ/ITT/RFQ</a>
+                </div>
+              </article>
+              
+              <article class="status-update">
+                <div class="avatar">
+                  <img src="img/avatar-img.png" alt="Avatar">
+                </div>
+                <div class="details">
+                  <header class="task-header">
+                    <div class="tag">New</div>
+                  </header>
+                  <p><a href="#">James Lee</a> has approved <a href="#">Contract Variation #595</a> for <a href="#">Christmas Emcee 2018</a>.</p>
+                  <a href="#" class="white-button">View ITQ/ITT/RFQ</a>
+                </div>
+              </article>
+                
+              <article class="status-update">
+                <div class="avatar">
+                  <img src="img/avatar-img2.png" alt="Avatar">
+                </div>
+                <div class="details">
+                  <header class="task-header">
+                    <div class="tag">New</div>
+                  </header>
+                  <p><a href="#">May Lim</a> has approved the ITQ for <a href="#">Committee Appreciation Dinner 2019</a>.</p>
+                  <a href="#" class="white-button">Read More</a>
+                </div>
+              </article>
+            </div>
+            <div class="notif-tab-content gro-content">
+              
+              <article class="gro-notif">
+                <div class="details">
+                  <header class="task-header">
+                    <h3>ITQ Pending Award</h3>
+                    <div class="tag">New</div>
+                  </header>
+                  <small>21 January 2019 at 5:50 PM</small>
+                  <p><a href="#">Professional Cleaning Services</a> has closed for bidding on 3 Feb 2019 with 3 Bids. Pending for your evaluation and award.</p>
+                </div>
+                <div class="white-button-container">
+                  <a href="#" class="white-button">Read More</a>
+                </div>
+              </article>
+
+              <article class="gro-notif">
+                <div class="details">
+                  <header class="task-header">
+                    <h3>Approval required for ITQ Publishing</h3>
+                    <div class="tag">New</div>
+                  </header>
+                  <small>2 February 2019 at 2:00 PM</small>
+                  <p><a href="#">Lunch Reception for Bursary Award 2019</a> has been submitted on 2 Feb 2019 by Jasmine Lee Pending for your approval for publishing.</p>
+                </div>
+                <div class="white-button-container">
+                  <a href="#" class="white-button">Read More</a>
+                </div>
+              </article>
+
+              <article class="gro-notif">
+                <div class="details">
+                  <header class="task-header">
+                    <h3>ITQ ready to be published</h3>
+                    <div class="tag">New</div>
+                  </header>
+                  <small>2 February 2019 at 2:00 PM</small>
+                  <p><a href="#">Residents Appreciation Lunch 2019</a> is ready to be open for bids on 1 Feb 2019</p>
+                </div>
+                <div class="white-button-container">
+                  <a href="#" class="white-button">Read More</a>
+                </div>
+              </article>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!-- # Site Footer # -->
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="content">
+      <div class="footer-logo">
+        <img src="img/footer-logo.png" alt="Footer Logo">
+        <img src="img/footer-text-logo.png" alt="G-Fast">
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Tell us More</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+<footer class="copyright-footer">
+  <div class="container">
+    <div class="content">
+      <nav class="copyright-nav">
+        <ul>
+          <li><a href="">Privacy Statement</a></li>
+          <li><a href="">Terms of Use</a></li>
+        </ul>
+      </nav>
+      <aside class="copyright">
+        © 2019 Government of Singapore
+      </aside>
+    </div>
+  </div>
+</footer>
+
+<!-- Behaviour -->
+<script src="js/vendor/jquery.js"></script>
+<!-- <script src="js/vendor/jquery-ui.min.js"></script>
+<script src="js/vendor/jquery.waypoints.min.js"></script> -->
+<script src="js/vendor/jquery.nice-select.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/index.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</body>
+</html>

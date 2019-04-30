@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO -->
+<meta name="author" content="Ken Samonte &lt;khsamonte@gmail.com&gt;">
+<meta  name="description" content="">
+<title>G-Fast Dashboard</title>
+
+<!-- Presentation -->
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="css/vendor/slick.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Structure -->
+<body>
+
+<!-- # Mobile Search -->
+<aside class="mobile-search">
+  
+  <div class="mobile-search-container">
+    <div class="close-mobile-search">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    
+    <form class="mobile-search-form">
+      <input type="search" name="masthead_search" placeholder="Search">
+      <button type="submit" name="masthead_submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </div>
+
+</aside>
+
+<!-- # Mobile Navigation # -->
+<aside class="mobile-nav">
+
+  <!-- ## Mobile Nav Header -->
+  <header class="mobile-admin">
+    <div class="content">
+      <div class="mobile-user">
+        <img src="img/lily-tan.png" alt="avatar">
+        <div class="admin">
+          <div class="admin-user">Lily Tan</div>
+          <small>AMK RC</small>
+        </div>
+      </div>
+
+      <div class="close-btn">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ## Mobile Nav Menu -->
+  <nav class="mobile-menu">
+    <ul>
+      <li class="active"><a href="#">Dashboard</a></li>
+      <li><a href="#">New Entries</a></li>
+      <li><a href="#">View Transactions</a></li>
+      <li><a href="#">Banking</a></li>
+      <li><a href="#">Reports</a></li>
+    </ul>
+  </nav>
+
+  <!-- ## Mobile Switch Accounts -->
+  <div class="switch-account">
+    <div class="content">
+      <a href="">Switch Account</a>
+      <small>Currently signed in as AMK RC</small>
+    </div>
+  </div>
+
+  <!-- ## Mobile Sign Out -->
+  <footer class="sign-out">
+    <div class="content">
+      
+      <div class="sign-out-link">
+        <a href="">Sign Out</a>
+      </div>
+      
+      <ul class="user-tools">
+        <li class="notifications">
+          <a href="#">
+            <i class="fas fa-bell"></i>
+            <div class="circle">2</div>
+          </a>
+        </li>
+        <li class="settings">
+          <a href="#">
+            <i class="fas fa-cog"></i>
+          </a>
+        </li>
+        <li class="help">
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</aside>
+
+<!-- # Mobile Header # -->
+<header class="mobile-header" id="mobile-header">
+  <div class="container">
+    <div class="content">
+      <div class="burger">
+        <a href="#" class="open-mobile-nav"><i class="fas fa-bars"></i></a>
+      </div>
+      <div class="mobile-logo">
+        <img src="img/footer-text-logo.png" alt="G-Fast">
+      </div>
+      <div class="search">
+        <a href="#" class="open-mobile-search"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- # Desktop Header # -->
+<header class="main-header" id="main-header">
+
+  <!-- ## Topmost Header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="content">
+        <img src="img/merlion-icon.png" alt="Merlion">
+        <div class="subhead">A Singapore Government Agency Website</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ## Logo & Search Header -->
+  <div class="masthead">
+    <div class="container">
+      <div class="content">
+
+        <div class="logo">
+          <a href="#"><img src="img/site-logo.png" alt="G-Fast"></a>
+        </div>
+        <form class="masthead-search">
+          <input type="search" name="masthead_search" placeholder="Search">
+          <button type="submit" name="masthead_submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- # Desktop Navigation # -->
+<nav class="main-nav" id="main-nav">
+  <div class="container">
+    <div class="content">
+
+      <!-- ## Site Menu -->
+      <ul class="site-menu">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li>
+          <a href="#">New Entries <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">Create New Entry 1</a></li>
+              <li><a href="#">Create New Entry 2</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="#">View Transactions <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">View Transaction 1</a></li>
+              <li><a href="#">View Transaction 2</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="#">Banking <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">Banking 1</a></li>
+              <li><a href="#">Banking 2</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li><a href="#">Reports</a></li>
+      </ul>
+
+      <!-- ## User Tools -->
+      <ul class="user-tools">
+
+        <li class="notifications">
+          <a href="#" class="notifications-button">
+            <i class="fas fa-bell"></i>
+            <div class="circle">2</div>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Notifications</h4>
+              <p>Showing recent updates about your account.</p>
+            </div>
+          </div>
+          <div class="notifications-content hidden">
+            <div class="notif unread">
+              <i class="fas fa-bell"></i>
+              <div class="notif-text">
+                <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                <small>5 May 2018, 00:00 AM</small>
+              </div>
+            </div>
+            <div class="notif read">
+                <i class="fas fa-bell"></i>
+                <div class="notif-text">
+                  <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                  <small>5 May 2018, 00:00 AM</small>
+                </div>
+              </div>
+          </div>
+        </li>
+
+        <li class="settings">
+          <a href="#">
+            <i class="fas fa-cog"></i>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Settings</h4>
+              <p>Configure your account information, etc.</p>
+            </div>
+          </div>
+        </li>
+        <li class="help">
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Help & Support</h4>
+              <p>Get some help from our support.</p>
+            </div>
+          </div>
+        </li>
+        <li class="admin-panel">
+          <a href="#">
+            <img src="img/lily-tan.png" alt="avatar">
+            <div class="admin">
+              <div class="admin-user">Lily Tan</div>
+              <small>AMK RC</small>
+            </div>
+          </a>
+          <nav class="admin-panel-dropdown">
+            <div class="panel-dropdown-container">
+              <ul class="admin-nav">
+                <li><a href="#">User Profile</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+              <footer class="admin-switch-account">
+                <a href="#">Switch Account</a>
+                <small>AMK RC</small>
+              </footer>
+            </div>
+          </nav>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- # View Payments # -->
+<section class="view-payments-page padded-section">
+  <!-- <div class="container"> -->
+  <header class="page-title">
+    <div class="container">
+
+      <div class="main-title">
+        <h1>Payment Listing</h1>
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="view-payments.html">Payments</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="title-options">
+        <button class="red-button">Enter New Payment</button>
+      </aside>
+    </div>
+  </header>
+
+  <div class="view-payments">
+    
+    <div class="container">
+      <div class="frame-container">
+        <div class="payment-listing-tab">
+          <ul class="payment-slick">
+            <li class="active"><a href="#" class="listing-tab all-tab">All <small>8</small></a></li>
+            <li><a href="#" class="listing-tab drafts-tab">Drafts <small>3</small></a></li>
+            <li><a href="#" class="listing-tab awaiting-approval-tab">Awaiting Approval <small>2</small></a></li>
+            <li><a href="#" class="listing-tab awaiting-payment-tab">Awaiting Payment <small>3</small></a></li>
+            <li><a href="#" class="listing-tab rejected-tab">Rejected <small>2</small></a></li>
+            <li><a href="#" class="listing-tab paid-tab">Paid <small>1</small></a></li>
+            <li><a href="#" class="listing-tab reserved-tab">Reserved <small>3</small></a></li>
+          </ul>
+        </div>
+
+        <div class="payment-listings">
+          <div class="content">
+            <div class="tab-content all-content">
+
+              <header class="payment-listing-options">
+                <form class="payment-listing-search-form">
+                  <input type="search" name="payment_listing_search" placeholder="Key in Entry# or Payment #">
+                  <button type="submit" name="payment_listing_search_submit">
+                    <i class="fas fa-search"></i>
+                  </button>
+                </form>
+                <div class="other-options">
+                  <select name="actions" class="actions-dropdown">
+                    <option value="#">Actions</option>
+                    <option value="pdf">Download PDF</option>
+                    <option value="excel">Download Excel</option>
+                    <option value="email">Send by Email</option>
+                    <option value="print">Print</option>
+                  </select>
+                  <button class="red-button">Export Listing to Excel</button>
+                </div>
+              </header>
+    
+              <table class="payment-listings-table gray-table responsive-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox_all" id="checkbox_all">
+                        <label for="checkbox_all"></label>
+                      </div>
+                    </th>
+                    <th>Date</th>
+                    <th>Entry #</th>
+                    <th>Payment <br>Voucher #</th>
+                    <th>Account Description</th>
+                    <th>Amount</th>
+                    <th>Source</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox1" class="payment-checkbox" id="checkbox1">
+                        <label for="checkbox1"></label>
+                      </div>
+                    </td>
+                    <td>12 Jan 2019</td>
+                    <td>1233</td>
+                    <td>4566</td>
+                    <td>Event Expenses [2002]</td>
+                    <td>SGD 5,000.00</td>
+                    <td>G-FAST</td>
+                    <td><div class="tag paid">Paid</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox2" class="payment-checkbox" id="checkbox2">
+                        <label for="checkbox2"></label>
+                      </div>
+                    </td>
+                    <td>12 Jan 2019</td>
+                    <td>1245</td>
+                    <td>4570</td>
+                    <td>Event Expenses [2002]</td>
+                    <td>SGD 800.00</td>
+                    <td>G-FAST</td>
+                    <td><div class="tag pending">Pending Approval</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox3" class="payment-checkbox" id="checkbox3">
+                        <label for="checkbox3"></label>
+                      </div>
+                    </td>
+                    <td>13 Jan 2019</td>
+                    <td>1246</td>
+                    <td>4571</td>
+                    <td>Professional Service [2100]</td>
+                    <td>SGD 570.00</td>
+                    <td>OnePA</td>
+                    <td><div class="tag pending">Pending Approval</div></td>
+                  </tr>
+                </tbody>
+              </table>
+
+            </div>
+
+            <div class="tab-content drafts-content">Drafts</div>
+            <div class="tab-content awaiting-approval-content">Awaiting Approval</div>
+            <div class="tab-content awaiting-payment-content">Awaiting Payment</div>
+            <div class="tab-content rejected-content">Rejected</div>
+            <div class="tab-content paid-content">Paid</div>
+            <div class="tab-content reserved-content">Reserved</div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- </div> -->
+</section>
+<!-- # Site Footer # -->
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="content">
+      <div class="footer-logo">
+        <img src="img/footer-logo.png" alt="Footer Logo">
+        <img src="img/footer-text-logo.png" alt="G-Fast">
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Tell us More</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+<footer class="copyright-footer">
+  <div class="container">
+    <div class="content">
+      <nav class="copyright-nav">
+        <ul>
+          <li><a href="">Privacy Statement</a></li>
+          <li><a href="">Terms of Use</a></li>
+        </ul>
+      </nav>
+      <aside class="copyright">
+        © 2019 Government of Singapore
+      </aside>
+    </div>
+  </div>
+</footer>
+
+<!-- Behaviour -->
+<script src="js/vendor/jquery.js"></script>
+<!-- <script src="js/vendor/jquery-ui.min.js"></script>
+<script src="js/vendor/jquery.waypoints.min.js"></script> -->
+<script src="js/vendor/jquery.nice-select.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/index.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</body>
+</html>

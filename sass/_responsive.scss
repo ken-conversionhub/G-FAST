@@ -1,0 +1,786 @@
+// Responsive
+
+@media only screen and (max-width: 1920px) {
+  
+}
+@media only screen and (max-width: 1366px) { // Desktop width
+
+}
+@media only screen and (max-width: 1280px) {
+
+}
+@media only screen and (max-width: 1200px) { // Start of Large
+  .payment-listing-tab > ul > li > a {
+    padding: 20px;
+  }
+}
+@media only screen and (max-width: 1024px) { // Foundation medium
+
+  .main-nav .site-menu li {
+    padding: 0 5px;
+  }
+
+  .main-nav .site-menu li a {
+    font: 16px $font-medium;
+  }
+
+  .links-and-reports .frame {
+    width: 49%;
+  }
+
+  .links-and-reports h2 {
+    font-size: 20px;
+  }
+  
+  .padded-section {
+    padding: 30px 0;
+  }
+
+  .welcome {
+    margin-bottom: 20px;
+  }
+
+  .payment-listing-tab small,
+  .notifications-tab > ul > li > a > small {
+    display: none;
+  }
+
+  .payment-listing-tab .payment-slick li,
+  .notifications-tab .notifications-slick li {
+    text-align: center;
+  }
+
+  .payment-listing-tab .payment-slick li:focus,
+  .payment-listing-tab .payment-slick li a:focus,
+  .notifications-tab .notifications-slick li:focus,
+  .notifications-tab .notifications-slick li a:focus {
+    outline: none;
+  }
+
+  .payment-listing-tab .payment-slick li a,
+  .notifications-tab .notifications-slick li a {
+    color: $black;
+    display: inline-block;
+    font-size: 14px;
+    padding: 20px;
+  }
+
+  .payment-listing-tab .payment-slick li.active a,
+  .notifications-tab .notifications-slick li.active a {
+    border-bottom: $red 3px solid;
+  }
+  
+  .bank-reconciliation .frame-container .content {
+    padding: 30px;
+  }
+
+  .transaction .bank-statements,
+  .transaction .gfast-entries,
+  .transaction .bank-entry-amount {
+    width: 40%;
+  }
+
+  .transaction .match-buttons {
+    width: 20%;
+  }
+
+  .transaction .check-buttons {
+    width: 20%;
+  }
+
+  .transaction .back-entry-total {
+    font-size: 20px;
+  }
+
+}
+@media only screen and (max-width: 992px) { // Start of Medium
+  .main-header,
+  .main-nav {
+    display: none;
+  }
+
+  .mobile-header {
+    display: block;
+  }
+  
+  :root .mobile-header-not-at-top {
+    --nav-height: 72px;
+  }
+
+  .mobile-header-not-at-top {
+    padding-top: 72px;
+
+    .mobile-header {
+      animation: moveDown 0.3s forwards;
+      border-top: none;
+      box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+      left: 0;
+      position: fixed;
+      top: 0;
+      transform: translateY(-72px);
+      width: 100%;
+    }
+  }
+
+  .welcome h1 {
+    font-size: 24px;
+  }
+
+  .bank-reconciliation h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .bank-reconciliation .tag {
+    margin-bottom: 10px;
+  }
+
+  .pending-task-feed .red-button a {
+    font-size: 12px;
+  }
+
+  .payment-listing-search-form {
+    @include flex-basis(40%);
+  }
+
+  .other-options {
+    @include flex-basis(60%);
+  }
+
+  // Steps in Bank Recon page
+
+  .steps h4 {
+    font-size: 15px;
+    padding: 0 15px;
+  }
+
+  .two-columns .left-col,
+  .two-columns .right-col {
+    width: 50%;
+  }
+
+  // Table responsiveness
+
+  .responsive-table,
+  .responsive-table thead,
+  .responsive-table tbody,
+  .responsive-table th,
+  .responsive-table td,
+  .responsive-table tr {
+    display: block;
+  }
+
+  .responsive-table {
+    width: 100%;
+  }
+
+  .responsive-table thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+  }
+
+  .responsive-table tbody tr {
+    border: 1px solid #ccc;
+  }
+
+  .responsive-table td {
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+    padding-left: 40%;
+    width: auto !important;
+  }
+
+  .responsive-table tr td::before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 20px;
+		left: 15px;
+		width: 35%; 
+    padding-right: 10px; 
+    font-weight: bold;
+		white-space: nowrap;
+  }
+
+  // diff
+  .payment-listings-table td {
+    padding-left: 50%;
+  }
+
+  .payment-listings-table tbody tr td::before {
+    width: 45%;
+  }
+
+  .bank-statement-table td {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .payment-listings-table tbody tr td::before,
+  .standard-input-table td::before { 
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 20px;
+		left: 15px;
+		width: 35%; 
+    padding-right: 10px; 
+    font-weight: bold;
+		white-space: nowrap;
+  }
+
+  .bank-statement-table tbody td::before {
+		position: absolute;
+		top: 10px;
+		left: 15px;
+		width: 35%; 
+		padding-right: 10px; 
+    font-weight: bold;
+		white-space: nowrap;
+  }
+  
+  .standard-input-table tbody tr td:nth-of-type(4)::after {
+    display: none;
+  }
+
+  // .payment-listings-table td:nth-of-type(1) {
+  //   padding-left: 15px;
+  // }
+  
+  .payment-listings-table td:nth-of-type(1):before { content: "Check"; }
+  .payment-listings-table td:nth-of-type(2):before { content: "Date"; }
+  .payment-listings-table td:nth-of-type(3):before { content: "Entry #"; }
+  .payment-listings-table td:nth-of-type(4):before { content: "Payment Voucher #"; }
+  .payment-listings-table td:nth-of-type(5):before { content: "Acct Description"; }
+  .payment-listings-table td:nth-of-type(6):before { content: "Amount"; }
+  .payment-listings-table td:nth-of-type(7):before { content: "Source"; }
+  .payment-listings-table td:nth-of-type(8):before { content: "Status"; }
+  
+  .standard-input-table td:nth-of-type(1):before { content: "Item Details"; }
+  .standard-input-table td:nth-of-type(2):before { content: "Account Description"; }
+  .standard-input-table td:nth-of-type(3):before { content: "Tax"; }
+  .standard-input-table td:nth-of-type(4):before { content: "Amount"; }
+  
+  .transaction-table td:nth-of-type(1):before { content: "Date"; }
+  .transaction-table td:nth-of-type(2):before { content: "Details"; }
+  .transaction-table td:nth-of-type(3):before { content: "Deposits"; }
+  .transaction-table td:nth-of-type(4):before { content: "Withdrawals"; }
+  
+  .bank-statement-table td:nth-of-type(1):before { content: "Date"; }
+  .bank-statement-table td:nth-of-type(2):before { content: "Description"; }
+  .bank-statement-table td:nth-of-type(3):before { content: "Cheque #"; }
+  .bank-statement-table td:nth-of-type(4):before { content: "Document #"; }
+  .bank-statement-table td:nth-of-type(5):before { content: "Account Description"; }
+  .bank-statement-table td:nth-of-type(6):before { content: "Amount"; }
+
+  .distribution-details-table td:nth-of-type(1):before { content: "S/N"; }
+  .distribution-details-table td:nth-of-type(2):before { content: "Serial #"; }
+  .distribution-details-table td:nth-of-type(3):before { content: "Voucher Value"; }
+  .distribution-details-table td:nth-of-type(4):before { content: "Quantity"; }
+  .distribution-details-table td:nth-of-type(5):before { content: "Total Amount"; }
+  .distribution-details-table td:nth-of-type(6):before { content: "Name"; }
+  .distribution-details-table td:nth-of-type(7):before { content: "Signature"; }
+  .distribution-details-table td:nth-of-type(8):before { content: " "; }
+
+  .movement-table td:nth-of-type(1):before { content: " "; }
+  .movement-table td:nth-of-type(2):before { content: "Month"; }
+  .movement-table td:nth-of-type(3):before { content: "Scheme"; }
+  .movement-table td:nth-of-type(4):before { content: "Opening Bal"; }
+  .movement-table td:nth-of-type(5):before { content: "Closing Bal"; }
+  .movement-table td:nth-of-type(6):before { content: "Documents"; }
+  .movement-table td:nth-of-type(7):before { content: "Status"; }
+
+  .green-button {
+    margin: 0;
+  }
+
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+
+  .transaction-table,
+  .transaction-table thead,
+  .transaction-table tbody,
+  .transaction-table th,
+  .transaction-table td,
+  .transaction-table tr { 
+		display: block; 
+  }
+
+  .transaction-table {
+    height: auto;
+    width: 100%;
+  }
+  
+  .transaction-table thead tr { 
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+  }
+  
+  .transaction-table tr {
+    border: 1px solid #ccc;
+  }
+
+  .transaction-table td {
+		border: none;
+		border-bottom: 1px solid #eee; 
+		position: relative;
+    padding-left: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: auto !important;
+  }
+
+  .transaction-table td::before { 
+		position: absolute;
+		top: 20px;
+		left: 15px;
+		width: 35%; 
+		padding-right: 10px; 
+		white-space: nowrap;
+  }
+
+  .transaction-table td::before {
+    top: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 767px) { // Start of small
+  .copyright-footer .copyright-nav ul {
+    display: block;
+
+    li {
+      padding-right: 0;
+
+      &:first-child {
+        padding-bottom: 10px;
+      }
+    }
+  }
+
+  .site-footer .footer-nav ul {
+    display: block;
+
+    li {
+      padding-left: 0;
+
+      &:first-child { padding-bottom: 10px; }
+    }
+  }
+
+  .links-and-reports {
+    flex-direction: column;
+
+    .frame { width: 100%; }
+    .tile-wrapper { justify-content: flex-start; }
+    .tile-link { width: 25%; }
+  }
+
+  .customize-links-desktop {
+    display: none;
+  }
+  .customize-links-mobile {
+    display: block;
+    margin-top: 30px;
+
+    .red-link {
+      justify-content: flex-end;
+      width: 100%;
+    }
+  }
+
+  .standard-form .form-section {
+    max-width: 100%;
+  }
+
+  .frame-container .content {
+    padding: 40px;
+  }
+
+  .buttons-footer .content {
+    padding: 30px;
+  }
+
+  .payment-listing-options {
+    display: block;
+  }
+
+  .payment-listing-search-form {
+    margin-bottom: 15px;
+  }
+
+  .other-options {
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+
+  .bank-reconciliation .transaction-container .content {
+    padding: 0;
+    padding-top: 30px;
+  }
+
+  .transaction {
+    flex-direction: column;
+    border-bottom: 1px solid $footerGray;
+    margin-bottom: 20px;
+    padding: 20px;
+  }
+
+  .transaction .bank-statements,
+  .transaction .gfast-entries{
+    padding-right: 0;
+    padding-left: 0;
+    width: 100%;
+  }
+
+  .transaction .match-buttons {
+    flex-direction: row;
+    width: 100%;
+  }
+
+  .transaction .check-buttons {
+    display: none;
+  }
+  
+  .match-buttons .match {
+    margin-right: 5px;
+    min-width: 100px;
+  }
+
+  .match-buttons .mismatch {
+    margin-left: 5px;
+    min-width: 100px;
+  }
+
+  .transaction-header {
+    display: none;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    padding: 10px 15px;
+  }
+
+  .transaction-table td::before {
+    display: none;
+  }
+
+  .transaction h3.mobile-only,
+  .transaction .custom-checkbox.mobile-only {
+    display: block;
+    margin-bottom: 10px;  
+  }
+
+  .transaction .bank-entry-amount {
+    padding-bottom: 15px;
+    width: 100%;
+  }
+
+  .transaction .bank-entry-amount:first-child {
+    padding-right: 0;
+  }
+
+  .transaction .bank-entry-amount:last-child {
+    padding-left: 0;
+  }
+
+  .task-notif {
+    display: block;
+  }
+
+  .task-notif .avatar {
+    margin-bottom: 20px;
+  }
+
+  .task-notif .white-button-container {
+    justify-content: flex-start;
+    margin-top: 10px;
+  }
+
+  .task-notif .details .task-header {
+    display: block;
+  }
+
+  .task-notif .details .task-header .tag {
+    display: inline-block;
+    margin-top: 10px;
+  }
+
+}
+
+@media only screen and (max-width: 736px) { // iPhone eXpensive landscape
+
+}
+
+@media only screen and (max-width: 684px) { // Android (Pixel 2) landscape
+
+}
+
+@media only screen and (max-width: 667px) { // iPhone landscape
+
+  article {
+    margin-bottom: 20px;
+    padding: 20px 35px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  .feed .avatar,
+  .feed .details,
+  .feed .red-button {
+    justify-content: left;
+    flex: none;
+    width: 100%;
+  }
+
+  .feed .avatar {
+    margin-bottom: 10px;
+  }
+
+  .feed .details .task-header .tag {
+    margin-bottom: 10px;
+  }
+
+  .feed .details {
+    margin-bottom: 15px;
+  }
+
+  .feed .red-button {
+    margin-bottom: 10px;
+
+    a {
+      max-width: 250px;
+    }
+  }
+
+  .standard-form .container,
+  .view-payments .container,
+  .bank-reconciliation .container {
+    padding: 0;
+  }
+
+  .frame-container {
+    margin-bottom: 0;
+  }
+
+  .frame-container h2 {
+    font-size: 28px;
+  }
+
+  .standard-form label {
+    font: 16px $font-medium;
+  }
+
+  .standard-form .form-section-bottom {
+    display: block;
+  }
+
+  .standard-form .form-section-bottom .button {
+    margin-bottom: 15px;
+  }
+
+  // Steps
+
+  .steps-section .container {
+    padding: 0;
+  }
+
+  .step-column {
+    width: 50%;
+  }
+
+  .steps h4 {
+    font-size: 14px;
+  }
+
+  .step-column:nth-of-type(2)::before {
+    content: none;
+  }
+
+  .buttons-footer .content {
+    display: block;
+  }
+
+  .buttons-footer p {
+    margin-top: 0;
+    font-size: 14px;
+  }
+
+  .steps-frame {
+    border: none;
+    padding: 0;
+  }
+
+  .step-frame-row .step-left {
+    width: 100%;
+  }
+
+  .step-frame-row .step-text {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .statement-container .white-section {
+    border: 0;
+    padding: 0;
+  }
+
+  .task-notif {
+    padding: 20px;
+  }
+
+  .status-update {
+    display: block;
+  }
+
+  .status-update .avatar {
+    margin-bottom: 10px;
+  }
+
+  .two-columns {
+    font-size: 14px;
+    margin-left: 0;
+  }
+
+}
+@media only screen and (max-width: 575px) { // Start of extra-small
+  .site-footer .content {
+    display: block;
+    text-align: center;
+  }
+
+  .site-footer .footer-logo {
+    justify-content: center;
+    margin-bottom: 10px;
+  }
+
+  .copyright-footer .content {
+    display: block;
+    text-align: center;
+  }
+
+  .copyright-footer .copyright { padding-top: 10px; }
+  
+  .links-and-reports .tile-link { width: 33%; }
+
+  .welcome {
+    flex-direction: column;
+    text-align: center;
+
+    h1 {
+      font-size: 20px;
+    }
+    date {
+      margin-top: 10px;
+    }
+  }
+
+  .frame-container .content,
+  .bank-reconciliation .frame-container .content {
+    padding: 20px;
+  }
+
+  .standard-input-table td:before {
+    font-size: 14px;
+  }
+
+  .standard-form .nice-select {
+    font-size: 14px;
+  }
+
+  .standard-form .nice-select .current {
+    display: inline-block;
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .standard-form label {
+    font: 14px $font-medium;
+  }
+
+  .standard-form input[type=text], .standard-form input[type=search] {
+    font-size: 14px;
+  }
+
+  .page-title {
+    display: block;
+  }
+
+  .title-options {
+    margin-top: 15px;
+  }
+
+  .transaction .bank-entry-amount .bank-entry-inner {
+    padding: 15px;
+  }
+
+  .bank-statement-table td::before {
+    width: 45%;
+  }
+
+  .bank-statement-table td {
+    padding-left: 50%;
+  }
+
+  .gro-notif .details .task-header {
+    display: block;
+  }
+
+  .gro-notif .details .task-header .tag {
+    margin-top: 10px;
+    display: inline-block;
+  }
+
+}
+@media only screen and (max-width: 480px) {
+  
+  .feed-heading {
+    flex-direction: column;
+  }
+
+  .feed-title {
+    margin-bottom: 10px;
+  }
+
+  .other-options {
+    display: block;
+  }
+
+  .actions-dropdown {
+    margin-bottom: 15px;
+  }
+
+  .transaction-table th,
+  .transaction-table td {
+    font-size: 14px;
+    padding: 10px;
+  }
+
+}
+@media only screen and (max-width: 420px) { // Android portrait
+  .links-and-reports .tile-link {
+    width: 50%;
+  }
+  h1 {
+    font-size: 24px;
+  }
+
+  h2,
+  .frame-container h2 {
+    font-size: 20px;
+  }
+}
+@media only screen and (max-width: 375px) { // iPhone portrait
+  .form-section-bottom .button .white-button {
+    margin-bottom: 15px;
+  }
+  body {
+    overflow-x: hidden;
+  }
+}
