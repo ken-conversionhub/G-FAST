@@ -652,6 +652,7 @@ a:focus {
   color: #000;
   display: block;
   font: 16px "Roboto Regular", Helvetica, sans-serif;
+  line-height: 1.5em;
   padding: 10px 15px;
   position: relative; }
 
