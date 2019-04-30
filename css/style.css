@@ -933,7 +933,7 @@ a:focus {
     text-decoration: none;
     width: 28%; }
     .links-and-reports .tile-link .tile {
-      border: #e6e8eb 1px solid;
+      border: #9c9c9c 2px solid;
       border-radius: 5px;
       display: flex;
       justify-content: center;
