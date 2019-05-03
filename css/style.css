@@ -472,7 +472,7 @@ a:focus {
       color: #93000a; }
 
 .mobile-nav {
-  background: #f0f0f0;
+  background: #edf1f6;
   position: fixed;
   top: 0;
   left: -100%;
@@ -931,6 +931,7 @@ a:focus {
   .links-and-reports .tile-link {
     margin-bottom: 20px;
     text-decoration: none;
+    transition: all 0.3s ease;
     width: 28%; }
     .links-and-reports .tile-link .tile {
       border: #9c9c9c 2px solid;
@@ -945,6 +946,12 @@ a:focus {
         color: #9c9c9c;
         font-size: 40px;
         transition: all 0.3s ease; }
+      .links-and-reports .tile-link .tile img {
+        background: #9c9c9c;
+        max-height: 45px;
+        transition: all 0.3s ease; }
+    .links-and-reports .tile-link:hover .tile img {
+      background: #c8010f; }
     .links-and-reports .tile-link small {
       color: #000;
       display: inline-block;
@@ -952,7 +959,6 @@ a:focus {
       max-width: 90px;
       transition: all 0.3s ease; }
     .links-and-reports .tile-link:hover .tile {
-      background: #f9e5e7;
       border-color: #c8010f; }
       .links-and-reports .tile-link:hover .tile i {
         color: #c8010f; }

@@ -147,7 +147,7 @@ a:focus {
 // Mobile Navigation
 
 .mobile-nav {
-  background: $bgGray;
+  background: #edf1f6;
   position: fixed;
   top: 0;
   left: -100%;
@@ -822,6 +822,7 @@ a:focus {
   .tile-link {
     margin-bottom: 20px;
     text-decoration: none;
+    transition: all 0.3s ease;
     width: 28%;
 
     .tile {
@@ -839,6 +840,17 @@ a:focus {
         font-size: 40px;
         transition: all 0.3s ease;
       }
+
+      img {
+        background: $footerGray;
+        max-height: 45px;
+        transition: all 0.3s ease;
+      }
+      
+    }
+    
+    &:hover .tile img {
+      background: $red;
     }
     
     small {
@@ -850,7 +862,7 @@ a:focus {
     }
     
     &:hover .tile {
-      background: $scarlet;
+      // background: $scarlet;
       border-color: $red;
 
       i {
