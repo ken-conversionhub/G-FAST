@@ -113,7 +113,7 @@
     .mobile-header {
       animation: moveDown 0.3s forwards;
       border-top: none;
-      box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+      // box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
       left: 0;
       position: fixed;
       top: 0;
@@ -157,6 +157,10 @@
   .two-columns .left-col,
   .two-columns .right-col {
     width: 50%;
+  }
+
+  .feed-heading .view-more a {
+    text-transform: capitalize;
   }
 
   // Table responsiveness
@@ -510,6 +514,23 @@
     margin-top: 10px;
   }
 
+  .task-header {
+    justify-content: space-between;
+  }
+
+  .task-header h3 {
+    width: 70%;
+  }
+
+  .task-header .tag {
+    max-height: 24px;
+  }
+
+  .feed-heading .feed-title h2 {
+    font-family: 'Roboto Regular';
+    font-weight: 500;
+  }
+
 }
 
 @media only screen and (max-width: 736px) { // iPhone eXpensive landscape
@@ -648,6 +669,26 @@
     margin-left: 0;
   }
 
+  .feed article {
+    border: 2px solid #e6e8eb;
+  }
+
+  .feed .circle {
+    margin: 0 auto 15px;
+  }
+
+  .feed .white-button-container {
+    justify-content: center;
+  }
+
+  .feed .white-button {
+    border: 1px solid $red;
+  }
+
+  .pending-task-feed .avatar {
+    text-align: center;
+  }
+
 }
 @media only screen and (max-width: 575px) { // Start of extra-small
   .site-footer .content {
@@ -740,12 +781,12 @@
 }
 @media only screen and (max-width: 480px) {
   
-  .feed-heading {
-    flex-direction: column;
-  }
+  // .feed-heading {
+  //   flex-direction: column;
+  // }
 
-  .feed-title {
-    margin-bottom: 10px;
+  .feed-heading .feed-title h2 {
+    font-size: 20px;
   }
 
   .other-options {
@@ -760,6 +801,26 @@
   .transaction-table td {
     font-size: 14px;
     padding: 10px;
+  }
+
+  .task-header {
+    justify-content: space-between;
+  }
+
+  .task-header h3 {
+    width: 70%;
+  }
+
+  .task-header .tag {
+    max-height: 25px;
+  }
+
+  .feed article {
+    padding: 35px 25px;
+  }
+
+  .feed .details {
+    padding-right: 0;
   }
 
 }

@@ -64,11 +64,45 @@
   <!-- ## Mobile Nav Menu -->
   <nav class="mobile-menu">
     <ul>
-      <li class="active"><a href="#">Dashboard</a></li>
-      <li><a href="#">New Entries</a></li>
-      <li><a href="#">View Transactions</a></li>
-      <li><a href="#">Banking</a></li>
-      <li><a href="#">Reports</a></li>
+      <li class="current-page"><a href="#">Dashboard </a></li>
+      <li class="has-submenu">
+        <a href="#">New Entries <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">New Payments</a></li>
+          <li><a href="#">Receipts</a></li>
+          <li><a href="#">Transfer of Funds</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Gift Voucher</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">View Transactions <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">View Payments</a></li>
+          <li><a href="#">View Receipts</a></li>
+          <li><a href="#">View Transfer of Funds</a></li>
+          <li><a href="#">View Journal</a></li>
+          <li><a href="#">View Gift Voucher Movement</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Banking <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">Bank Statement</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Submit Accounts for Month’s Close</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Reports <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">Income & Expenditure</a></li>
+          <li><a href="#">Balance Sheet</a></li>
+          <li><a href="#">Receipt & Payment</a></li>
+          <li><hr></li>
+          <li><a href="#">Other Financial Reports</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
@@ -447,7 +481,7 @@
       </div>
       
       <div class="view-more">
-        <a href="">View More</a>
+        <a href="">View All</a>
       </div>
     </header>
 
@@ -464,8 +498,8 @@
             <h3>Approval Required for Payment</h3>
             <div class="tag">New</div>
           </header>
-          <small>21 Jan 2019 at 5:50 PM</small>
-          <p>$2,500 for Professional Services submitted by Lily Leo requires your approval</p>
+          <small>21 January 2019 at 5:50 PM</small>
+          <p>$2,500.00 for Professional Services submitted by <a href="">Lily Teo</a> requires your approval</p>
         </div>
         <div class="white-button-container">
           <a href="#" class="white-button">View Approval Request</a>
@@ -483,8 +517,8 @@
             <h3>Approval Required for Accounts</h3>
             <div class="tag">New</div>
           </header>
-          <small>21 Jan 2019 at 5:00 PM</small>
-          <p>Accounts for Dec 2018 for AMK RC has been submitted by Lily Lee for your approval</p>
+          <small>21 January 2019 at 5:00 PM</small>
+          <p>Accounts for Dec 2018 for <a href="">AMK RC</a> has been submitted by <a href="">Lily Lee</a> for your approval</p>
         </div>
         <div class="white-button-container">
           <a href="#" class="white-button">View Approval Request</a>
@@ -501,7 +535,7 @@
           <header class="task-header">
             <h3>Action for Bank Reconciliation</h3>
           </header>
-          <small>15 Jan 2019 at 3:30 PM</small>
+          <small>15 January 2019 at 3:30 PM</small>
           <p>There are 20 items awaiting bank reconciliation</p>
         </div>
         <div class="white-button-container">
@@ -524,7 +558,7 @@
       </div>
       
       <div class="view-more">
-        <a href="">View More</a>
+        <a href="">View All</a>
       </div>
     </header>
 
@@ -538,7 +572,7 @@
           <header class="task-header">
             <h3>Payment Update</h3>
           </header>
-          <small>21 Jan 2019 at 5:50 PM</small>
+          <small>21 January 2019 at 5:50 PM</small>
           <p><a href="#">Payment #1233</a> has been created and submitted for approval to <a href="#">Lily Tan</a>.</p>
         </div>
         <div class="white-button-container">
@@ -554,7 +588,7 @@
           <header class="task-header">
             <h3>Payment Update</h3>
           </header>
-          <small>21 Jan 2019 at 5:00 PM</small>
+          <small>21 January 2019 at 5:00 PM</small>
           <p><a href="#">Lily Tan</a> has approved <a href="#">Payment #1231</a>.</p>
         </div>
         <div class="white-button-container">
@@ -570,7 +604,7 @@
           <header class="task-header">
               <h3>Payment Update</h3>
           </header>
-          <small>15 Jan 2019 at 3:30 PM</small>
+          <small>15 January 2019 at 3:30 PM</small>
           <p><a href="#">Gussie Lyons</a> has approved <a href="#">Payment #1109</a>.</p>
         </div>
         <div class="white-button-container">

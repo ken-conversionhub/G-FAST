@@ -515,19 +515,41 @@ a:focus {
       font-size: 36px; }
 
 .mobile-menu {
-  background: #f0f0f0;
-  padding: 50px 30px 120px; }
-  .mobile-menu li {
-    margin-bottom: 25px; }
-    .mobile-menu li a {
-      color: #000;
-      display: flex;
-      font: 18px "Roboto Bold";
-      justify-content: space-between;
-      text-decoration: none;
-      text-transform: uppercase; }
-    .mobile-menu li.active a {
-      color: #c8010f; }
+  background: #edf1f6;
+  padding: 50px 15px 120px; }
+
+.mobile-menu > ul > li {
+  padding: 15px; }
+
+.mobile-menu > ul > li > a {
+  color: #000;
+  display: flex;
+  font: 18px "Roboto Bold";
+  justify-content: space-between;
+  text-decoration: none;
+  text-transform: uppercase; }
+
+.mobile-menu > ul > li.current-page > a {
+  color: #c8010f; }
+
+.mobile-menu > ul > li > a > i {
+  color: #c8010f; }
+
+.mobile-menu > ul > li.active {
+  margin-bottom: 25px; }
+
+.mobile-submenu {
+  display: none;
+  padding-top: 10px;
+  margin-left: 15px; }
+
+.mobile-submenu li {
+  margin: 10px 0; }
+
+.mobile-submenu li a {
+  color: #000;
+  font: 15px "Roboto Regular", Helvetica, sans-serif;
+  text-transform: capitalize; }
 
 .switch-account {
   background: #f5fbf7;
@@ -605,7 +627,7 @@ a:focus {
   display: none; }
   .mobile-header .content {
     display: flex;
-    padding: 20px 0; }
+    padding: 17px 0; }
   .mobile-header .burger i,
   .mobile-header .search i {
     color: #fff;
@@ -1051,6 +1073,7 @@ a:focus {
   margin-bottom: 15px; }
 
 .feed .details p {
+  line-height: 1.7em;
   margin: 0; }
   .feed .details p a:hover {
     color: #93000a; }
@@ -2141,7 +2164,6 @@ a:focus {
     .mobile-header-not-at-top .mobile-header {
       animation: moveDown 0.3s forwards;
       border-top: none;
-      box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
       left: 0;
       position: fixed;
       top: 0;
@@ -2178,6 +2200,9 @@ a:focus {
   .two-columns .left-col,
   .two-columns .right-col {
     width: 50%; }
+
+  .feed-heading .view-more a {
+    text-transform: capitalize; }
 
   .responsive-table,
   .responsive-table thead,
@@ -2527,7 +2552,20 @@ a:focus {
 
   .task-notif .details .task-header .tag {
     display: inline-block;
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  .task-header {
+    justify-content: space-between; }
+
+  .task-header h3 {
+    width: 70%; }
+
+  .task-header .tag {
+    max-height: 24px; }
+
+  .feed-heading .feed-title h2 {
+    font-family: 'Roboto Regular';
+    font-weight: 500; } }
 @media only screen and (max-width: 667px) {
   article {
     margin-bottom: 20px;
@@ -2622,7 +2660,22 @@ a:focus {
 
   .two-columns {
     font-size: 14px;
-    margin-left: 0; } }
+    margin-left: 0; }
+
+  .feed article {
+    border: 2px solid #e6e8eb; }
+
+  .feed .circle {
+    margin: 0 auto 15px; }
+
+  .feed .white-button-container {
+    justify-content: center; }
+
+  .feed .white-button {
+    border: 1px solid #c8010f; }
+
+  .pending-task-feed .avatar {
+    text-align: center; } }
 @media only screen and (max-width: 575px) {
   .site-footer .content {
     display: block;
@@ -2693,11 +2746,8 @@ a:focus {
     margin-top: 10px;
     display: inline-block; } }
 @media only screen and (max-width: 480px) {
-  .feed-heading {
-    flex-direction: column; }
-
-  .feed-title {
-    margin-bottom: 10px; }
+  .feed-heading .feed-title h2 {
+    font-size: 20px; }
 
   .other-options {
     display: block; }
@@ -2708,7 +2758,22 @@ a:focus {
   .transaction-table th,
   .transaction-table td {
     font-size: 14px;
-    padding: 10px; } }
+    padding: 10px; }
+
+  .task-header {
+    justify-content: space-between; }
+
+  .task-header h3 {
+    width: 70%; }
+
+  .task-header .tag {
+    max-height: 25px; }
+
+  .feed article {
+    padding: 35px 25px; }
+
+  .feed .details {
+    padding-right: 0; } }
 @media only screen and (max-width: 420px) {
   .links-and-reports .tile-link {
     width: 50%; }

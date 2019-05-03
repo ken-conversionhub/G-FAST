@@ -208,25 +208,51 @@ a:focus {
 }
 
 .mobile-menu {
-  background: $bgGray;
-  padding: 50px 30px 120px;
+  background: #edf1f6;
+  padding: 50px 15px 120px;
+}
 
-  li {
-    margin-bottom: 25px;
+.mobile-menu > ul > li {
+  // background: #fff;
+  // margin-bottom: 25px;
+  padding: 15px;
+}
 
-    a {
-      color: $black;
-      display: flex;
-      font: 18px $font-bold;
-      justify-content: space-between;
-      text-decoration: none;
-      text-transform: uppercase;
-    }
-    
-    &.active a {
-      color: $red;
-    }
-  }
+.mobile-menu > ul > li > a {
+  color: $black;
+  display: flex;
+  font: 18px $font-bold;
+  justify-content: space-between;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.mobile-menu > ul > li.current-page > a {
+  color: $red;
+}
+
+.mobile-menu > ul > li > a > i {
+  color: $red;
+}
+
+.mobile-menu > ul > li.active {
+  margin-bottom: 25px;
+}
+
+.mobile-submenu {
+  display: none;
+  padding-top: 10px;
+  margin-left: 15px;
+}
+
+.mobile-submenu li {
+  margin: 10px 0;
+}
+
+.mobile-submenu li a {
+  color: $black;
+  font: 15px $font;
+  text-transform: capitalize;
 }
 
 .switch-account {
@@ -350,7 +376,7 @@ a:focus {
   .content {
     display: flex;
     @extend %flexDefault;
-    padding: 20px 0;
+    padding: 17px 0;
   }
 
   .burger i,
@@ -1009,6 +1035,7 @@ a:focus {
 
 .feed .details p {
   @extend %text;
+  line-height: 1.7em;
   margin: 0;
 
   a:hover {
