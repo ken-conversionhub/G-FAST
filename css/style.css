@@ -213,6 +213,11 @@ h3 {
     opacity: 0; }
   100% {
     opacity: 1; } }
+@keyframes fadeOut {
+  0% {
+    opacity: 1; }
+  100% {
+    opacity: 0; } }
 .waypoint {
   opacity: 0; }
 
@@ -234,12 +239,15 @@ h3 {
 .pop-in {
   animation: popIn .75s ease both; }
 
-.fade-in {
-  animation: fadeIn .75s ease both; }
-
 .mobile-nav,
 .mobile-search {
-  z-index: 1000; }
+  z-index: 2000; }
+
+.mobile-header {
+  z-index: 1700; }
+
+.overlay {
+  z-index: 1500; }
 
 .main-nav {
   z-index: 1000; }
@@ -247,8 +255,7 @@ h3 {
 .notifications-content {
   z-index: 500; }
 
-.site-header,
-.mobile-header {
+.site-header {
   z-index: 100; }
 
 .nice-select {
@@ -414,6 +421,9 @@ a {
 a:focus {
   outline: none; }
 
+.no-scroll {
+  overflow: hidden; }
+
 .overlay {
   background: rgba(0, 0, 0, 0.7);
   display: none;
@@ -422,6 +432,12 @@ a:focus {
   position: fixed;
   top: 0;
   width: 100%; }
+
+.overlay.active {
+  display: block; }
+
+.overlay.active {
+  display: block; }
 
 .container {
   max-width: 1140px;

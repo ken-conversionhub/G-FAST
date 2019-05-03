@@ -63,6 +63,7 @@
 	const mobileNav = document.querySelector('.mobile-nav');
 	const openMobileNav = document.querySelector('.open-mobile-nav');
 	const closeMobileNav = document.querySelector('.close-btn');
+	const overlay = document.querySelector('.overlay');
 
 	// Mobile Search Variables
 	const mobileSearch = document.querySelector('.mobile-search');
@@ -136,6 +137,8 @@
 			if (!mobileNav.classList.contains('slide-in-left')) {
 					mobileNav.classList.add('slide-in-left');
 					mobileNav.classList.remove('slide-in-right');
+					overlay.classList.add('active');
+					body.classList.add('no-scroll');
 			}
 
 	});
@@ -147,6 +150,8 @@
 			if (!mobileNav.classList.contains('slide-in-right')) {
 					mobileNav.classList.add('slide-in-right');
 					mobileNav.classList.remove('slide-in-left');
+					overlay.classList.remove('active');
+					body.classList.remove('no-scroll');
 			}
 
 	});

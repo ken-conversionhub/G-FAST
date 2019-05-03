@@ -1,6 +1,14 @@
 .mobile-nav,
 .mobile-search {
-  z-index: 1000;
+  z-index: 2000;
+}
+
+.mobile-header {
+  z-index: 1700;
+}
+
+.overlay {
+  z-index: 1500;
 }
 
 .main-nav {
@@ -11,7 +19,6 @@
   z-index: 500;
 }
 
-.site-header,
-.mobile-header {
+.site-header {
   z-index: 100;
 }

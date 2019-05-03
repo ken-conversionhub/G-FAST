@@ -119,6 +119,15 @@
   }
 }
 
+@keyframes fadeOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
 // Animations
 
 .waypoint {
@@ -149,6 +158,10 @@
   animation: popIn .75s ease both;
 }
 
-.fade-in {
-  animation: fadeIn .75s ease both;
-}
+// .fade-in {
+//   animation: fadeIn .75s ease both;
+// }
+
+// .fade-out {
+//   animation: fadeOut .75s ease both;
+// }
