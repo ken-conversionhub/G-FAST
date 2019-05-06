@@ -73,6 +73,23 @@
 
 	});
 
+	// Approval event
+	$(document).on('click', '.approval', function(e) {
+		e.preventDefault();
+		$('.approval').each(function() {
+			$(this).removeClass('active');
+		});
+		$(this).addClass('active');
+
+		// Click offline approval, show offline approval content
+		$(this).hasClass('offline-approval') ? $('.offline-approval-content').show() : $('.offline-approval-content').hide();
+		
+		// Click online approval, show online approval content
+		$(this).hasClass('online-approval') ? $('.online-approval-content').show() : $('.online-approval-content').hide();
+	})
+
+	$('.online-approval-content').hide();
+
 	/***** VARIABLES *****/
 
 	const body = document.querySelector('body');
@@ -161,16 +178,15 @@
 
 	});
 
-	// Closes mobile navigation
 	closeMobileNav.addEventListener('click', function(e) {
 
-			e.preventDefault();
-			if (!mobileNav.classList.contains('slide-in-right')) {
-					mobileNav.classList.add('slide-in-right');
-					mobileNav.classList.remove('slide-in-left');
-					overlay.classList.remove('active');
-					body.classList.remove('no-scroll');
-			}
+		e.preventDefault();
+		if (!mobileNav.classList.contains('slide-in-right')) {
+				mobileNav.classList.add('slide-in-right');
+				mobileNav.classList.remove('slide-in-left');
+				overlay.classList.remove('active');
+				body.classList.remove('no-scroll');
+		}
 
 	});
 
@@ -196,33 +212,37 @@
 
 	});
 
-	closeAlert.addEventListener('click', function(e) {
-
-			e.preventDefault();
-			console.log("Test");
-	})
+	// Closes mobile navigation
+	if (closeAlert !== null) {
+		// Home page notification
+		closeAlert.addEventListener('click', function(e) {
+	
+				e.preventDefault();
+				console.log("Test");
+		})
+	}
 
 	notifButton.addEventListener('click', function(e) {
 
-			e.preventDefault();
+		e.preventDefault();
 
-			if (notifContent.classList.contains('shown')) {
-					notifContent.classList.add('hidden');
-					notifContent.classList.remove('shown');
-				
-					for (let i = 0; i < toolDropdowns.length; ++i) {
-						toolDropdowns[i].classList.remove('hidden');
-					}
-
-			} else {
-					notifContent.classList.add('shown');
-					notifContent.classList.remove('hidden');
-
-					for (let i = 0; i < toolDropdowns.length; ++i) {
-							toolDropdowns[i].classList.add('hidden');
-					}
-
+		if (notifContent.classList.contains('shown')) {
+			notifContent.classList.add('hidden');
+			notifContent.classList.remove('shown');
+		
+			for (let i = 0; i < toolDropdowns.length; ++i) {
+				toolDropdowns[i].classList.remove('hidden');
 			}
+
+		} else {
+		 	notifContent.classList.add('shown');
+			notifContent.classList.remove('hidden');
+
+			for (let i = 0; i < toolDropdowns.length; ++i) {
+					toolDropdowns[i].classList.add('hidden');
+			}
+
+		}
 
 	});
 

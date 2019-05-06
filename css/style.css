@@ -1505,6 +1505,30 @@ a:focus {
   text-align: center;
   width: 100%; }
 
+.approval-selection {
+  display: flex;
+  margin-bottom: 30px; }
+
+.approval {
+  border: #e6e8eb 1px solid;
+  border-radius: 10px;
+  color: #000;
+  cursor: pointer;
+  margin-right: 20px;
+  max-width: 400px;
+  padding: 30px; }
+
+.approval h3 {
+  text-transform: uppercase; }
+
+.approval.active {
+  background: #c8010f;
+  border: #c8010f 1px solid;
+  color: #fff; }
+
+.approval.active h3 {
+  color: #fff; }
+
 .step-column {
   text-align: center;
   position: relative;

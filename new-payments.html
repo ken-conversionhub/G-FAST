@@ -305,7 +305,7 @@
 
           <div class="form-section">
             <label for="vendor_name">Vendor Name</label>
-            <input type="search" name="vendor_name" id="vendor_name" placeholder="Type in vendor name">
+            <input type="search" name="vendor_name" id="vendor_name" placeholder="Type in vendor's name">
             <button class="floating-button" name="search_vendor_name">
               <i class="fas fa-search"></i>
             </button>
@@ -318,7 +318,7 @@
 
           <div class="form-section">
             <label for="invoice_number">Invoice Number</label>
-            <input type="text" name="invoice_number" id="invoice_number" placeholder="Your invoice number here">
+            <input type="text" name="invoice_number" id="invoice_number" placeholder="Type your invoice # here">
           </div>
 
           <div class="form-section">
@@ -329,6 +329,7 @@
           <div class="form-section">
             <label for="sub_committee">Sub-Committee</label>
             <select name="sub_committee" id="sub_committee">
+              <option value="#" disabled selected>Select Sub-Committee</option>
               <option value="#">Sub-Committee A</option>
               <option value="#">Sub-Committee B</option>
               <option value="#">Sub-Committee C</option>
@@ -339,6 +340,7 @@
           <div class="form-section">
             <label for="project_name">Project Name</label>
             <select name="project_name" id="project_name">
+              <option value="#" disabled selected>Select Project Name</option>
               <option value="#">Chinese New Year 2019</option>
               <option value="#">Chinese New Year 2018</option>
               <option value="#">Chinese New Year 2017</option>
@@ -385,7 +387,7 @@
 
           <div class="form-section-bottom">
             <div class="button">
-              <button class="red-button">Add Another Line</button>
+              <button class="white-button">Add Another Line</button>
             </div>
             <div class="total">
               <div class="total-text">Total</div>
@@ -400,47 +402,67 @@
         <div class="content">
           <h2>Mode of Payment Approval</h2>
 
-          <div class="form-section">
-            <label for="payment_mode">Payment Mode</label>
-            <select name="payment_mode" id="payment_mode">
-              <option value="#">Cheque</option>
-              <option value="#">Cash</option>
-              <option value="#">Credit</option>
-            </select>
-          </div>
-
-          <div class="form-section">
-            <label for="payment_voucher">Payment Voucher</label>
-            <select name="payment_voucher" id="payment_voucher">
-              <option value="#" disabled selected>Type in the payment voucher number</option>
-              <option value="#">Voucher 1</option>
-              <option value="#">Voucher 2</option>
-              <option value="#">Voucher 3</option>
-            </select>
-          </div>
-
-          <div class="form-section">
-            <label for="bank_name">Bank Name</label>
-            <select name="bank_name" id="bank_name">
-              <option value="#" disabled selected>Select Bank</option>
-              <option value="#">Banco de Oro</option>
-              <option value="#">MetroBank</option>
-              <option value="#">Bank of the Philippine Islands</option>
-            </select>
-          </div>
-
-          <div class="form-section">
-            <label for="cheque_number">Cheque #</label>
-            <input type="text" name="cheque_number" id="cheque_number" placeholder="Type in cheque number">
-          </div>
-
-          <div class="form-section">
-            <label>Attachments</label>
-            <div class="attachments">
-              <a href="#">
-                Select file or drop your files here
-              </a>
+          <div class="approval-selection">
+            <div class="approval offline-approval active">
+              <h3>Offline Approval</h3>
+              <p>I have received approval for this payment offline (e.g. signed payment voucher) and I have made payment offline (e.g. Cheque, Cash).</p>
             </div>
+            <div class="approval online-approval">
+              <h3>Online Approval via G-Fast</h3>
+              <p>I have not received approval for this payment offline and payment has not been made. Approval will be via G-Fast.</p>
+            </div>
+          </div>
+
+          <div class="offline-approval-content">
+
+            <div class="form-section">
+                <label for="payment_mode">Payment Mode</label>
+                <select name="payment_mode" id="payment_mode">
+                  <option value="#" disabled selected>Select Payment Mode</option>
+                  <option value="#">Cheque</option>
+                  <option value="#">Cash</option>
+                  <option value="#">Credit</option>
+                </select>
+              </div>
+    
+              <div class="form-section">
+                <label for="payment_voucher">Payment Voucher</label>
+                <select name="payment_voucher" id="payment_voucher">
+                  <option value="#" disabled selected>Select payment voucher #</option>
+                  <option value="#">Voucher 1</option>
+                  <option value="#">Voucher 2</option>
+                  <option value="#">Voucher 3</option>
+                </select>
+              </div>
+    
+              <div class="form-section">
+                <label for="bank_name">Bank Name</label>
+                <select name="bank_name" id="bank_name">
+                  <option value="#" disabled selected>Select Bank</option>
+                  <option value="#">Banco de Oro</option>
+                  <option value="#">MetroBank</option>
+                  <option value="#">Bank of the Philippine Islands</option>
+                </select>
+              </div>
+    
+              <div class="form-section">
+                <label for="cheque_number">Cheque #</label>
+                <input type="text" name="cheque_number" id="cheque_number" placeholder="Type in cheque number">
+              </div>
+    
+              <div class="form-section">
+                <label>Attachments</label>
+                <div class="attachments">
+                  <a href="#">
+                    Select file or drop your files here
+                  </a>
+                </div>
+              </div>
+      
+          </div>
+
+          <div class="online-approval-content">
+            Test
           </div>
 
           <div class="form-section-bottom">

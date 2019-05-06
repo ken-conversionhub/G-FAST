@@ -1633,6 +1633,37 @@ a:focus {
   width: 100%;
 }
 
+// Approval Selection
+
+.approval-selection {
+  display: flex;
+  margin-bottom: 30px;
+}
+
+.approval {
+  border: $borderGray 1px solid;
+  border-radius: 10px;
+  color: $black;
+  cursor: pointer;
+  margin-right: 20px;
+  max-width: 400px;
+  padding: 30px;
+}
+
+.approval h3 {
+  text-transform: uppercase
+}
+
+.approval.active {
+  background: $red;
+  border: $red 1px solid;
+  color: $white;
+}
+
+.approval.active h3 {
+  color: $white;
+}
+
 // STEPS CSS
 
 .steps {
