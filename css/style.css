@@ -48,11 +48,11 @@
   position: absolute;
   width: 0; }
 
-.mobile-search-container, .mobile-admin .content, .mobile-admin .mobile-user, .sign-out .content, .top-header .content, .masthead .content, .main-nav .content, .site-menu, .site-menu > li > a, .user-tools, .user-tools > li.notifications > a, .admin-panel > a, .welcome, .links-and-reports, .links-and-reports .tile-wrapper, .customize-links, .customize-links .red-link, .customize-links .red-link a, .feed-heading, .feed-heading .feed-title, .feed article, .feed .details .task-header, .site-footer .content, .site-footer .footer-logo, .site-footer .footer-nav ul, .copyright-footer .content, .copyright-footer .copyright-nav ul, .page-title .container, .breadcrumbs > ul, .payment-listing-tab > ul, .payment-listing-tab > ul > li > a, .payment-listing-options, .form-section-bottom, .total, .standard-form .attachments, .steps, .bank-header, .step-frame-row, .transaction-header, .transaction, .transaction .bank-entry-amount .bank-entry-inner, .buttons-footer .content, .check-buttons, .gray-container, .gray-section, .notifications-tab > ul, .notifications-tab > ul > li > a, .task-notif, .task-notif .details .task-header, .status-update, .status-update .details .task-header, .gro-notif .details .task-header, .two-columns, .red-table, .movement-table td:first-child, .pagination, .pagination ul {
+.mobile-search-container, .mobile-admin .content, .mobile-admin .mobile-user, .sign-out .content, .top-header .content, .masthead .content, .main-nav .content, .site-menu, .site-menu > li > a, .user-tools, .user-tools > li.notifications > a, .admin-panel > a, .welcome, .links-and-reports, .links-and-reports .tile-wrapper, .customize-links, .customize-links .red-link, .customize-links .red-link a, .feed-heading, .feed-heading .feed-title, .feed article, .feed .details .task-header, .site-footer .content, .site-footer .footer-logo, .site-footer .footer-nav ul, .copyright-footer .content, .copyright-footer .copyright-nav ul, .page-title .container, .breadcrumbs > ul, .payment-listing-tab > ul, .payment-listing-tab > ul > li > a, .payment-listing-options, .form-section-bottom, .total, .standard-form .attachments, .steps, .bank-header, .step-frame-row, .transaction, .transaction .bank-entry-amount .bank-entry-inner, .buttons-footer .content, .check-buttons, .gray-container, .gray-section, .notifications-tab > ul, .notifications-tab > ul > li > a, .task-notif, .task-notif .details .task-header, .status-update, .status-update .details .task-header, .gro-notif .details .task-header, .two-columns, .red-table, .movement-table td:first-child, .pagination, .pagination ul {
   display: flex;
   flex-wrap: wrap; }
 
-.mobile-search-container, .mobile-admin .content, .mobile-admin .mobile-user, .sign-out .content, .masthead .content, .mobile-header .content, .main-nav .content, .site-menu, .alert-container, .welcome, .feed-heading, .site-footer .content, .copyright-footer .content, .page-title .container, .payment-listing-options, .form-section-bottom, .transaction-header, .transaction .bank-entry-amount .bank-entry-inner, .buttons-footer .content, .check-buttons, .gray-container, .gray-section, .red-table {
+.mobile-search-container, .mobile-admin .content, .mobile-admin .mobile-user, .sign-out .content, .masthead .content, .mobile-header .content, .main-nav .content, .site-menu, .alert-container, .welcome, .feed-heading, .site-footer .content, .copyright-footer .content, .page-title .container, .payment-listing-options, .form-section-bottom, .transaction .bank-entry-amount .bank-entry-inner, .buttons-footer .content, .check-buttons, .gray-container, .gray-section, .red-table {
   align-items: center;
   justify-content: space-between; }
 
@@ -1168,10 +1168,21 @@ a:focus {
   transition: all 0.3s ease; }
 
 .white-button:hover {
-  background: #c8010f;
-  border: 2px solid #c8010f;
-  color: #fff;
   cursor: pointer; }
+
+.white-button2 {
+  background: #fff;
+  border: 1px solid #c8010f;
+  border-radius: 5px;
+  color: #c8010f;
+  cursor: pointer;
+  display: inline-block;
+  font: 14px "Roboto Regular", Helvetica, sans-serif;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease; }
 
 .frame-container {
   background: #fff;
@@ -1251,7 +1262,7 @@ a:focus {
   flex-basis: 40%;
   position: relative; }
   .payment-listing-search-form input[type="search"] {
-    border: #e6e8eb 1px solid;
+    border: #9c9c9c 1px solid;
     border-radius: 5px;
     padding: 20px 20px;
     width: 100%; }
@@ -1341,7 +1352,7 @@ a:focus {
   top: 0;
   left: 0;
   background: none;
-  border: 1px solid #ddd;
+  border: 1px solid #9c9c9c;
   border-radius: 5px; }
 
 .custom-checkbox label:after {
@@ -1593,7 +1604,6 @@ a:focus {
 .steps-frame {
   border: 1px solid #e6e8eb;
   border-radius: 5px;
-  display: inline-block;
   margin-top: 30px;
   padding: 30px; }
 
@@ -1611,9 +1621,20 @@ a:focus {
   font: 15px "Roboto Regular", Helvetica, sans-serif;
   width: 80%; }
 
+.transaction-header {
+  display: flex;
+  align-items: top;
+  justify-content: flex-start; }
+
 .transaction-header h2 {
   font: 25px "Roboto Regular", Helvetica, sans-serif;
-  margin-bottom: 30px; }
+  margin-bottom: 30px;
+  width: 45%; }
+
+.transaction-header span {
+  display: inline-block;
+  padding: 0 15px;
+  width: 10%; }
 
 .transaction {
   align-items: stretch;
@@ -1779,7 +1800,7 @@ a:focus {
 
 .buttons-footer p {
   color: #000;
-  font: 15px "Roboto Bold";
+  font: 15px "Roboto Regular", Helvetica, sans-serif;
   text-transform: uppercase; }
 
 .buttons-footer .white-button {

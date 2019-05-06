@@ -1205,10 +1205,25 @@ a:focus {
 }
 
 .white-button:hover {
-  background: $red;
-  border: 2px solid $red;
-  color: $white;
+  // background: $red;
+  // border: 2px solid $red;
+  // color: $white;
   cursor: pointer;
+}
+
+.white-button2 {
+  background: $white;
+  border: 1px solid $red;
+  border-radius: 5px;
+  color: $red;
+  cursor: pointer;
+  display: inline-block;
+  font: 14px $font;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: all 0.3s ease;
 }
 
 // Frame Containers
@@ -1319,7 +1334,7 @@ a:focus {
 
   input[type="search"] {
     @extend %text;
-    border: $borderGray 1px solid;
+    border: $footerGray 1px solid;
     border-radius: 5px;
     padding: 20px 20px;
     width: 100%;
@@ -1436,7 +1451,7 @@ a:focus {
   top: 0;
   left: 0;
   background: none;
-  border: 1px solid #ddd;
+  border: 1px solid $footerGray;
   border-radius: 5px;
 }
 
@@ -1748,7 +1763,6 @@ a:focus {
 .steps-frame {
   border: 1px solid $borderGray;
   border-radius: 5px;
-  display: inline-block;
   margin-top: 30px;
   // max-width: 100%;
   padding: 30px;
@@ -1775,13 +1789,21 @@ a:focus {
 // Transaction
 
 .transaction-header {
-  @extend %flex;
-  @extend %flexDefault;
+  display: flex;
+  align-items: top;
+  justify-content: flex-start;
 }
 
 .transaction-header h2 {
   font: 25px $font;
   margin-bottom: 30px;
+  width: 45%;
+}
+
+.transaction-header span {
+  display: inline-block;
+  padding: 0 15px;
+  width: 10%;
 }
 
 .transaction {
@@ -1984,7 +2006,7 @@ a:focus {
 
 .buttons-footer p {
   color: $black;
-  font: 15px $font-bold;
+  font: 15px $font;
   text-transform: uppercase;
 }
 
