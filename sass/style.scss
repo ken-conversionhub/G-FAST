@@ -430,7 +430,7 @@ a:focus {
   align-items: center;
   border-radius: 5px;
   color: #fff;
-  font: 18px $font-medium;
+  font: 18px $font;
   padding: 10px;
   text-decoration: none;
   transition: all 0.3s ease;
@@ -534,7 +534,7 @@ a:focus {
 }
 
 .user-tools > li > a > i {
-  font-size: 22px;
+  font-size: 24px;
   transition: all 0.3s ease;
 }
 
@@ -577,7 +577,7 @@ a:focus {
 }
 
 .admin-panel small {
-  color: rgba(255, 255, 255, 0.5);
+  color: $white;
   font: 12px $font;
 }
 
@@ -1192,7 +1192,7 @@ a:focus {
 
 .white-button {
   background: $white;
-  border: 2px solid $red;
+  border: 1px solid $red;
   border-radius: 5px;
   color: $red;
   display: inline-block;
@@ -1369,8 +1369,9 @@ a:focus {
 }
 
 .actions-dropdown {
-  margin-right: 15px;
+  border: 1px solid $footerGray;
   height: 52px;
+  margin-right: 15px;
   line-height: 52px;
 }
 
@@ -1900,7 +1901,6 @@ a:focus {
 .transaction-table {
   // border-collapse: collapse;
   border-spacing: 0;
-  border-radius: 5px;
   height: 100%;
   margin-bottom: 20px;
   width: 100%;
@@ -1956,14 +1956,14 @@ a:focus {
 
 .match-buttons .match {
   background: #fff;
-  border: 2px solid $green;
+  border: 1px solid $green;
   border-radius: 5px;
   color: $green;
   cursor: pointer;
   display: inline-block;
   font: 15px $font-bold;
   margin-bottom: 15px;
-  padding: 15px 20px;
+  padding: 10px 15px;
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
@@ -1975,14 +1975,14 @@ a:focus {
 
 .match-buttons .mismatch {
   background: #fff;
-  border: 2px solid $red;
+  border: 1px solid $red;
   border-radius: 5px;
   color: $red;
   cursor: pointer;
   display: inline-block;
   font: 15px $font-bold;
   margin-bottom: 15px;
-  padding: 15px 20px;
+  padding: 10px 15px;
   text-transform: uppercase;
   transition: all 0.3s ease;
 }
@@ -2048,7 +2048,7 @@ a:focus {
 }
 
 .gray-text {
-  color: rgba(0, 0, 0, 0.5);
+  color: $black;
   font: 15px $font;
 }
 
@@ -2088,7 +2088,7 @@ a:focus {
 }
 
 .bank-statement-table td {
-  color: rgba(0, 0, 0, 0.5);
+  color: $black;
   font: 15px $font;
   padding: 5px 0;
   text-align: left;
