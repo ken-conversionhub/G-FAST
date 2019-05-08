@@ -1299,13 +1299,15 @@ a:focus {
   width: 100%; }
 
 .gray-table thead {
-  background: #f0f0f0; }
+  background: #f8f8f8;
+  border: 1px solid #dee2e6; }
 
 .gray-table th {
-  border-bottom: 1px solid #e6e8eb;
+  border-bottom: 1px solid #dee2e6;
   color: #000;
-  font: 14px "Roboto Regular", Helvetica, sans-serif;
-  padding: 10px 15px;
+  font: 16px "Roboto Regular", Helvetica, sans-serif;
+  font-weight: 600;
+  padding: 20px;
   text-align: left; }
 
 .gray-table th:first-child {
@@ -1315,14 +1317,18 @@ a:focus {
   border-top-right-radius: 5px; }
 
 .gray-table tbody tr {
-  border: 1px solid #e6e8eb;
+  border: 1px solid #dee2e6;
   border-top: none; }
 
 .gray-table td {
+  background: #fff;
   color: #000;
   font: 14px "Roboto Regular", Helvetica, sans-serif;
   padding: 20px 15px;
   text-align: left; }
+
+.gray-table td:nth-of-type(even) {
+  background: #f8f8f8; }
 
 .payment-listings-table td:nth-child(3),
 .payment-listings-table td:nth-child(4) {
@@ -1506,7 +1512,7 @@ a:focus {
 
 .standard-form .attachments {
   align-items: center;
-  border: 1px #c8010f dashed;
+  border: 2px #c8010f dotted;
   border-radius: 5px;
   margin-bottom: 5px;
   text-align: center; }
@@ -1517,6 +1523,10 @@ a:focus {
   padding: 40px;
   text-align: center;
   width: 100%; }
+
+.form-section-attachment p {
+  color: #000;
+  font: 15px "Roboto Regular", Helvetica, sans-serif; }
 
 .approval-selection {
   display: flex;
@@ -2267,11 +2277,12 @@ a:focus {
     left: -9999px; }
 
   .responsive-table tbody tr {
-    border: 1px solid #ccc; }
+    border: 1px solid #ccc;
+    padding: 10px 0; }
 
   .responsive-table td {
     border: none;
-    border-bottom: 1px solid #eee;
+    padding: 10px 15px;
     position: relative;
     padding-left: 40%;
     width: auto !important; }
@@ -2280,7 +2291,7 @@ a:focus {
     /* Now like a table header */
     position: absolute;
     /* Top/left values mimic padding */
-    top: 20px;
+    top: 10px;
     left: 15px;
     width: 35%;
     padding-right: 10px;
@@ -2302,7 +2313,7 @@ a:focus {
     /* Now like a table header */
     position: absolute;
     /* Top/left values mimic padding */
-    top: 20px;
+    top: 10px;
     left: 15px;
     width: 35%;
     padding-right: 10px;
@@ -2674,11 +2685,27 @@ a:focus {
     content: none; }
 
   .buttons-footer .content {
-    display: block; }
+    display: block;
+    text-align: center; }
 
   .buttons-footer p {
     margin-top: 0;
     font-size: 14px; }
+
+  .buttons-footer .white-button {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 400px;
+    padding: 10px 15px;
+    width: 100%; }
+
+  .buttons-footer .red-button {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 10px 15px;
+    width: 100%; }
 
   .steps-frame {
     border: none;
@@ -2721,7 +2748,15 @@ a:focus {
     border: 1px solid #c8010f; }
 
   .pending-task-feed .avatar {
-    text-align: center; } }
+    text-align: center; }
+
+  .approval-selection {
+    display: block; }
+
+  .approval {
+    margin-bottom: 15px;
+    max-width: 100%;
+    width: 100%; } }
 @media only screen and (max-width: 575px) {
   .site-footer .content {
     display: block;

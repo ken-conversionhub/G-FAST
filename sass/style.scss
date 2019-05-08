@@ -1384,14 +1384,16 @@ a:focus {
 }
 
 .gray-table thead {
-  background: $bgGray;
+  background: #f8f8f8;
+  border: 1px solid #dee2e6;
 }
 
 .gray-table th {
-  border-bottom: 1px solid $borderGray;
+  border-bottom: 1px solid #dee2e6;
   color: $black;
-  font: 14px $font;
-  padding: 10px 15px;
+  font: 16px $font;
+  font-weight: 600;
+  padding: 20px;
   text-align: left;
 }
 
@@ -1404,15 +1406,20 @@ a:focus {
 }
 
 .gray-table tbody tr {
-  border: 1px solid $borderGray;
+  border: 1px solid #dee2e6;
   border-top: none;
 }
 
 .gray-table td {
+  background: #fff;
   color: $black;
   font: 14px $font;
   padding: 20px 15px;
   text-align: left;
+}
+
+.gray-table td:nth-of-type(even) {
+  background: #f8f8f8;
 }
 
 .payment-listings-table td:nth-child(3),
@@ -1635,7 +1642,7 @@ a:focus {
 .standard-form .attachments {
   @extend %flex;
   align-items: center;
-  border: 1px $red dashed;
+  border: 2px $red dotted;
   border-radius: 5px;
   margin-bottom: 5px;
   text-align: center;
@@ -1647,6 +1654,11 @@ a:focus {
   padding: 40px;
   text-align: center;
   width: 100%;
+}
+
+.form-section-attachment p {
+  color: $black;
+  font: 15px $font;
 }
 
 // Approval Selection

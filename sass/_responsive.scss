@@ -186,11 +186,12 @@
 
   .responsive-table tbody tr {
     border: 1px solid #ccc;
+    padding: 10px 0;
   }
 
   .responsive-table td {
-		border: none;
-		border-bottom: 1px solid #eee; 
+    border: none;
+    padding: 10px 15px;
 		position: relative;
     padding-left: 40%;
     width: auto !important;
@@ -200,7 +201,7 @@
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
-		top: 20px;
+		top: 10px;
 		left: 15px;
 		width: 35%; 
     padding-right: 10px; 
@@ -227,7 +228,7 @@
 		/* Now like a table header */
 		position: absolute;
 		/* Top/left values mimic padding */
-		top: 20px;
+		top: 10px;
 		left: 15px;
 		width: 35%; 
     padding-right: 10px; 
@@ -626,11 +627,29 @@
 
   .buttons-footer .content {
     display: block;
+    text-align: center;
   }
 
   .buttons-footer p {
     margin-top: 0;
     font-size: 14px;
+  }
+
+  .buttons-footer .white-button {
+    display: block;
+    margin: 0 auto 10px;
+    max-width: 400px;
+    padding: 10px 15px;
+    width: 100%;
+  }
+
+  .buttons-footer .red-button {
+    box-sizing: border-box;
+    display: block;
+    margin: 0 auto;
+    max-width: 400px;
+    padding: 10px 15px;
+    width: 100%;
   }
 
   .steps-frame {
@@ -687,6 +706,16 @@
 
   .pending-task-feed .avatar {
     text-align: center;
+  }
+
+  .approval-selection {
+    display: block;
+  }
+
+  .approval {
+    margin-bottom: 15px;
+    max-width: 100%;
+    width: 100%;
   }
 
 }
