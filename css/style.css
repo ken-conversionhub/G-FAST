@@ -1398,6 +1398,9 @@ a:focus {
   max-width: 350px;
   position: relative; }
 
+.standard-form .form-section.form-section-attachment {
+  max-width: 100%; }
+
 .total-text,
 .total-value {
   background: #f9e5e7;
@@ -1520,13 +1523,62 @@ a:focus {
 .standard-form .attachments a {
   display: block;
   height: 100%;
-  padding: 40px;
+  padding: 80px 40px;
   text-align: center;
   width: 100%; }
 
 .form-section-attachment p {
   color: #000;
   font: 15px "Roboto Regular", Helvetica, sans-serif; }
+
+.attachment-labels {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px; }
+
+.attached-file {
+  border: 1px solid #e4e6e9;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 15px; }
+
+.attached-file .file-left {
+  background: #eeeeee;
+  border-top: 4px solid #c8010f;
+  border-radius: 10px 0 0 10px;
+  padding: 25px 20px;
+  text-align: center;
+  height: 75px;
+  min-width: 75px; }
+
+.attached-file .file-left i {
+  align-self: center;
+  color: #aaaaaa; }
+
+.attached-file .file-right {
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  height: 75px;
+  text-align: left;
+  width: 95%; }
+
+.attached-file .file-right h4 {
+  color: #c8010f;
+  font: 15px "Roboto Regular", Helvetica, sans-serif;
+  margin: 0; }
+
+.attached-file .file-right p {
+  margin: 5px 0; }
+
+.attached-file .file-right i {
+  color: #666666; }
+
+.file-info {
+  text-align: left; }
 
 .approval-selection {
   display: flex;
@@ -1599,6 +1651,12 @@ a:focus {
   padding: 0 30px;
   text-transform: uppercase; }
 
+.steps h4.for-desktop {
+  display: block; }
+
+.steps h4.for-mobile {
+  display: none; }
+
 .bank-reconciliation h2 {
   font: 35px "Roboto Regular", Helvetica, sans-serif;
   margin-bottom: 0;
@@ -1654,6 +1712,7 @@ a:focus {
   margin-bottom: 30px; }
 
 .transaction:last-child {
+  border-bottom: 0;
   margin-bottom: 0; }
 
 .transaction h3.mobile-only,
@@ -1804,6 +1863,7 @@ a:focus {
 .buttons-footer {
   background: #fff;
   border: #e6e8eb 1px solid;
+  border-top: #c8010f 5px solid;
   border-radius: 5px; }
 
 .buttons-footer .content {
@@ -2332,6 +2392,18 @@ a:focus {
   .standard-input-table tbody tr td:nth-of-type(4)::after {
     display: none; }
 
+  .attachment-labels {
+    display: block; }
+
+  .task-notif .details .task-header h3 {
+    font-size: 18px; }
+
+  .task-notif .details p {
+    font-size: 14px; }
+
+  .task-notif .details small {
+    font-size: 14px; }
+
   .payment-listings-table td:nth-of-type(1):before {
     content: "Check"; }
 
@@ -2601,7 +2673,7 @@ a:focus {
     margin-bottom: 20px; }
 
   .task-notif .white-button-container {
-    justify-content: flex-start;
+    justify-content: center;
     margin-top: 10px; }
 
   .task-notif .details .task-header {
@@ -2622,7 +2694,10 @@ a:focus {
 
   .feed-heading .feed-title h2 {
     font-family: 'Roboto Regular';
-    font-weight: 500; } }
+    font-weight: 500; }
+
+  .task-notif .circle {
+    margin: 0 auto; } }
 @media only screen and (max-width: 667px) {
   article {
     margin-bottom: 20px;
@@ -2654,7 +2729,8 @@ a:focus {
 
   .standard-form .container,
   .view-payments .container,
-  .bank-reconciliation .container {
+  .bank-reconciliation .container,
+  .notifications-section .container {
     padding: 0; }
 
   .frame-container {
@@ -2675,14 +2751,8 @@ a:focus {
   .steps-section .container {
     padding: 0; }
 
-  .step-column {
-    width: 50%; }
-
   .steps h4 {
     font-size: 14px; }
-
-  .step-column:nth-of-type(2)::before {
-    content: none; }
 
   .buttons-footer .content {
     display: block;
@@ -2756,7 +2826,16 @@ a:focus {
   .approval {
     margin-bottom: 15px;
     max-width: 100%;
-    width: 100%; } }
+    width: 100%; }
+
+  .status-update .avatar {
+    text-align: center; }
+
+  .status-update .details .white-button-container {
+    justify-content: center; }
+
+  .status-update .white-button-container {
+    justify-content: center; } }
 @media only screen and (max-width: 575px) {
   .site-footer .content {
     display: block;
@@ -2825,7 +2904,13 @@ a:focus {
 
   .gro-notif .details .task-header .tag {
     margin-top: 10px;
-    display: inline-block; } }
+    display: inline-block; }
+
+  .steps h4 {
+    font-size: 12px; }
+
+  .transaction {
+    padding: 20px 0; } }
 @media only screen and (max-width: 480px) {
   .feed-heading .feed-title h2 {
     font-size: 20px; }
@@ -2854,7 +2939,16 @@ a:focus {
     padding: 35px 25px; }
 
   .feed .details {
-    padding-right: 0; } }
+    padding-right: 0; }
+
+  .steps h4 {
+    font-size: 10px; }
+
+  .steps h4.for-desktop {
+    display: none; }
+
+  .steps h4.for-mobile {
+    display: block; } }
 @media only screen and (max-width: 420px) {
   .links-and-reports .tile-link {
     width: 50%; }

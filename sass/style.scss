@@ -1507,6 +1507,9 @@ a:focus {
   max-width: 350px;
   position: relative;
 }
+.standard-form .form-section.form-section-attachment {
+  max-width: 100%;
+}
 
 .form-section-bottom {
   @extend %flex;
@@ -1651,7 +1654,7 @@ a:focus {
 .standard-form .attachments a {
   display: block;
   height: 100%;
-  padding: 40px;
+  padding: 80px 40px;
   text-align: center;
   width: 100%;
 }
@@ -1659,6 +1662,64 @@ a:focus {
 .form-section-attachment p {
   color: $black;
   font: 15px $font;
+}
+
+.attachment-labels {
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 15px;
+}
+
+.attached-file {
+  border: 1px solid #e4e6e9;
+  border-radius: 10px;
+  display: flex;
+  margin-top: 15px;
+}
+
+.attached-file .file-left {
+  background: #eeeeee;
+  border-top: 4px solid $red;
+  border-radius: 10px 0 0 10px;
+  padding: 25px 20px;
+  text-align: center;
+  height: 75px;
+  min-width: 75px;
+}
+
+.attached-file .file-left i {
+  align-self: center;
+  color: #aaaaaa;
+}
+
+.attached-file .file-right {
+  align-items: center;
+  background: #f8f8f8;
+  border-radius: 0 10px 10px 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 20px;
+  height: 75px;
+  text-align: left;
+  width: 95%;
+}
+
+.attached-file .file-right h4 {
+  color: $red;
+  font: 15px $font;
+  margin: 0;
+}
+
+.attached-file .file-right p {
+  margin: 5px 0;
+}
+
+.attached-file .file-right i {
+  color: #666666;
+}
+
+.file-info {
+  text-align: left;
 }
 
 // Approval Selection
@@ -1752,6 +1813,9 @@ a:focus {
   text-transform: uppercase;
 }
 
+.steps h4.for-desktop { display: block; }
+.steps h4.for-mobile { display: none; }
+
 // Bank Reconciliation
 
 .bank-reconciliation h2 {
@@ -1827,6 +1891,7 @@ a:focus {
 }
 
 .transaction:last-child {
+  border-bottom: 0;
   margin-bottom: 0;
 }
 
@@ -2007,6 +2072,7 @@ a:focus {
 .buttons-footer {
   background: #fff;
   border: $borderGray 1px solid;
+  border-top: #c8010f 5px solid;
   border-radius: 5px;
 }
 
