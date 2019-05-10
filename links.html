@@ -21,6 +21,8 @@
 <!-- Structure -->
 <body>
 
+<div class="overlay"> </div>
+
 <!-- # Mobile Search -->
 <aside class="mobile-search">
   
@@ -62,11 +64,45 @@
   <!-- ## Mobile Nav Menu -->
   <nav class="mobile-menu">
     <ul>
-      <li class="active"><a href="#">Dashboard</a></li>
-      <li><a href="#">New Entries</a></li>
-      <li><a href="#">View Transactions</a></li>
-      <li><a href="#">Banking</a></li>
-      <li><a href="#">Reports</a></li>
+      <li class="current-page"><a href="#">Dashboard </a></li>
+      <li class="has-submenu">
+        <a href="#">New Entries <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">New Payments</a></li>
+          <li><a href="#">Receipts</a></li>
+          <li><a href="#">Transfer of Funds</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Gift Voucher</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">View Transactions <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">View Payments</a></li>
+          <li><a href="#">View Receipts</a></li>
+          <li><a href="#">View Transfer of Funds</a></li>
+          <li><a href="#">View Journal</a></li>
+          <li><a href="#">View Gift Voucher Movement</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Banking <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">Bank Statement</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Submit Accounts for Month’s Close</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Reports <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">Income & Expenditure</a></li>
+          <li><a href="#">Balance Sheet</a></li>
+          <li><a href="#">Receipt & Payment</a></li>
+          <li><hr></li>
+          <li><a href="#">Other Financial Reports</a></li>
+        </ul>
+      </li>
     </ul>
   </nav>
 
@@ -144,7 +180,7 @@
       <div class="content">
 
         <div class="logo">
-          <a href="#"><img src="img/site-logo.png" alt="G-Fast"></a>
+          <a href="#"><img src="img/footer-text-logo.png" alt="G-Fast"></a>
         </div>
         <form class="masthead-search">
           <input type="search" name="masthead_search" placeholder="Search">
@@ -170,8 +206,11 @@
           <a href="#">New Entries <i class="fas fa-caret-down"></i></a>
           <nav class="site-menu-dropdown">
             <ul>
-              <li><a href="#">Create New Entry 1</a></li>
-              <li><a href="#">Create New Entry 2</a></li>
+              <li><a href="#">New Payments</a></li>
+              <li><a href="#">Receipts</a></li>
+              <li><a href="#">Transfer of Funds</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Gift Voucher</a></li>
             </ul>
           </nav>
         </li>
@@ -179,8 +218,11 @@
           <a href="#">View Transactions <i class="fas fa-caret-down"></i></a>
           <nav class="site-menu-dropdown">
             <ul>
-              <li><a href="#">View Transaction 1</a></li>
-              <li><a href="#">View Transaction 2</a></li>
+              <li><a href="#">View Payments</a></li>
+              <li><a href="#">View Receipts</a></li>
+              <li><a href="#">View Transfer of Funds</a></li>
+              <li><a href="#">View Journal</a></li>
+              <li><a href="#">View Gift Voucher Movement</a></li>
             </ul>
           </nav>
         </li>
@@ -188,12 +230,24 @@
           <a href="#">Banking <i class="fas fa-caret-down"></i></a>
           <nav class="site-menu-dropdown">
             <ul>
-              <li><a href="#">Banking 1</a></li>
-              <li><a href="#">Banking 2</a></li>
+              <li><a href="#">Bank Statement</a></li>
+              <li><a href="#">Bank Reconciliation</a></li>
+              <li><a href="#">Submit Accounts for Month’s Close</a></li>
             </ul>
           </nav>
         </li>
-        <li><a href="#">Reports</a></li>
+        <li>
+          <a href="#">Reports <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">Income & Expenditure</a></li>
+              <li><a href="#">Balance Sheet</a></li>
+              <li><a href="#">Receipt & Payment</a></li>
+              <li><hr></li>
+              <li><a href="#">Other Financial Reports</a></li>
+            </ul>
+          </nav>
+        </li>
       </ul>
 
       <!-- ## User Tools -->
@@ -277,7 +331,6 @@
     </div>
   </div>
 </nav>
-
 
 <section class="new-payments-page padded-section">
   <header class="page-title">
