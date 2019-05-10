@@ -48,6 +48,16 @@
   position: absolute;
   width: 0; }
 
+.notifications-mobile-content::before {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid #fff;
+  top: 100%;
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0; }
+
 .mobile-search-container, .mobile-admin .content, .mobile-admin .mobile-user, .sign-out .content, .top-header .content, .masthead .content, .main-nav .content, .site-menu, .site-menu > li > a, .user-tools, .user-tools > li.notifications > a, .admin-panel > a, .welcome, .links-and-reports, .links-and-reports .tile-wrapper, .customize-links, .customize-links .red-link, .customize-links .red-link a, .feed-heading, .feed-heading .feed-title, .feed article, .feed .details .task-header, .site-footer .content, .site-footer .footer-logo, .site-footer .footer-nav ul, .copyright-footer .content, .copyright-footer .copyright-nav ul, .page-title .container, .breadcrumbs > ul, .payment-listing-tab > ul, .payment-listing-tab > ul > li > a, .payment-listing-options, .form-section-bottom, .total, .standard-form .attachments, .steps, .bank-header, .step-frame-row, .transaction, .transaction .bank-entry-amount .bank-entry-inner, .buttons-footer .content, .check-buttons, .gray-container, .gray-section, .notifications-tab > ul, .notifications-tab > ul > li > a, .task-notif, .task-notif .details .task-header, .status-update, .status-update .details .task-header, .gro-notif .details .task-header, .two-columns, .red-table, .movement-table td:first-child, .pagination, .pagination ul {
   display: flex;
   flex-wrap: wrap; }
@@ -735,7 +745,7 @@ a:focus {
   font-size: 24px;
   transition: all 0.3s ease; }
 
-.user-tools > li > a > i:hover {
+.main-nav .user-tools > li > a > i:hover {
   color: #e09096; }
 
 .user-tools > li.notifications > a {
@@ -864,6 +874,28 @@ a:focus {
   visibility: true; }
 
 .notifications-content::before {
+  right: 35px; }
+
+.notifications-mobile-content {
+  background: #fff;
+  border: 1px solid #e6e8eb;
+  border-radius: 5px;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+  min-width: 350px;
+  position: absolute;
+  right: -30px;
+  bottom: 85px;
+  transition: all 0.3s ease; }
+
+.notifications-mobile-content.hidden {
+  opacity: 0;
+  visibility: hidden; }
+
+.notifications-mobile-content.shown {
+  opacity: 1;
+  visibility: true; }
+
+.notifications-mobile-content::before {
   right: 35px; }
 
 .notif {
@@ -1308,7 +1340,12 @@ a:focus {
   font: 16px "Roboto Regular", Helvetica, sans-serif;
   font-weight: 600;
   padding: 20px;
-  text-align: left; }
+  text-align: left;
+  text-transform: uppercase; }
+
+.payment-listings-table th,
+.movement-table th {
+  text-transform: uppercase; }
 
 .gray-table th:first-child {
   border-top-left-radius: 5px; }
@@ -1327,8 +1364,8 @@ a:focus {
   padding: 20px 15px;
   text-align: left; }
 
-.gray-table td:nth-of-type(even) {
-  background: #f8f8f8; }
+.payment-listings-table td {
+  border: 1px solid #dee2e6; }
 
 .payment-listings-table td:nth-child(3),
 .payment-listings-table td:nth-child(4) {
@@ -1532,8 +1569,6 @@ a:focus {
   font: 15px "Roboto Regular", Helvetica, sans-serif; }
 
 .attachment-labels {
-  display: flex;
-  justify-content: space-between;
   padding-bottom: 15px; }
 
 .attached-file {
@@ -2338,7 +2373,8 @@ a:focus {
 
   .responsive-table tbody tr {
     border: 1px solid #ccc;
-    padding: 10px 0; }
+    padding: 10px 0;
+    margin-bottom: 20px; }
 
   .responsive-table td {
     border: none;
@@ -2365,11 +2401,11 @@ a:focus {
     width: 45%; }
 
   .bank-statement-table td {
-    padding-top: 10px;
+    padding-top: 30px;
+    padding-left: 15px;
     padding-bottom: 10px; }
 
-  .payment-listings-table tbody tr td::before,
-  .standard-input-table td::before {
+  .payment-listings-table tbody tr td::before {
     /* Now like a table header */
     position: absolute;
     /* Top/left values mimic padding */
@@ -2380,7 +2416,12 @@ a:focus {
     font-weight: bold;
     white-space: nowrap; }
 
+  .standard-input-table tr td::before {
+    top: 20px; }
+
   .bank-statement-table tbody td::before {
+    color: #9c9c9c;
+    text-transform: uppercase;
     position: absolute;
     top: 10px;
     left: 15px;
@@ -2516,7 +2557,35 @@ a:focus {
     content: "Status"; }
 
   .green-button {
-    margin: 0; } }
+    margin: 0; }
+
+  .movement-table tr {
+    margin-bottom: 20px; }
+
+  .movement-table td {
+    padding-left: 15px;
+    padding-top: 30px; }
+
+  .movement-table td::before {
+    color: #9c9c9c;
+    text-transform: uppercase; }
+
+  .movement-table td:first-child {
+    padding-top: 0; }
+
+  .distribution-details-table td {
+    padding-left: 15px;
+    padding-top: 30px; }
+
+  .distribution-details-table td::before {
+    color: #9c9c9c;
+    text-transform: uppercase; }
+
+  .distribution-details-table td:last-child {
+    padding-top: 0px; }
+
+  .distribution-details-table .with-margin {
+    margin-top: 10px; } }
 @media (max-width: 1024px) and (min-width: 768px) {
   .transaction-table,
   .transaction-table thead,
@@ -2556,7 +2625,22 @@ a:focus {
     white-space: nowrap; }
 
   .transaction-table td::before {
-    top: 10px; } }
+    top: 10px; }
+
+  .transaction-table td:nth-of-type(1):before {
+    content: "Date"; }
+
+  .transaction-table td:nth-of-type(2):before {
+    content: "Details"; }
+
+  .transaction-table td:nth-of-type(3):before {
+    content: "Deposits"; }
+
+  .transaction-table td:nth-of-type(4):before {
+    content: "Withdrawals"; }
+
+  .bank-statement-table tr {
+    margin-bottom: 25px; } }
 @media only screen and (max-width: 767px) {
   .copyright-footer .copyright-nav ul {
     display: block; }
@@ -2666,38 +2750,39 @@ a:focus {
   .transaction .bank-entry-amount:last-child {
     padding-left: 0; }
 
-  .task-notif {
-    display: block; }
+  .green-button {
+    margin: 0 auto; }
 
-  .task-notif .avatar {
+  .movement-table .green-button {
+    margin: 0; }
+
+  .bank-statement-table tr {
     margin-bottom: 20px; }
 
-  .task-notif .white-button-container {
-    justify-content: center;
-    margin-top: 10px; }
+  .two-columns .left-col,
+  .two-columns .right-col {
+    width: 100%; }
 
-  .task-notif .details .task-header {
-    display: block; }
+  .two-columns .left-col {
+    color: #9c9c9c;
+    margin-bottom: 10px;
+    text-transform: uppercase; }
 
-  .task-notif .details .task-header .tag {
-    display: inline-block;
-    margin-top: 10px; }
+  .two-columns {
+    margin-bottom: 30px; } }
+@media only screen and (max-width: 736px) {
+  .standard-input-table tbody tr {
+    padding: 20px 0; }
 
-  .task-header {
-    justify-content: space-between; }
+  .standard-input-table td {
+    padding: 25px 15px 20px; }
 
-  .task-header h3 {
-    width: 70%; }
+  .standard-input-table td input[type=text],
+  .standard-input-table td .nice-select {
+    border: #e6e8eb 2px solid; }
 
-  .task-header .tag {
-    max-height: 24px; }
-
-  .feed-heading .feed-title h2 {
-    font-family: 'Roboto Regular';
-    font-weight: 500; }
-
-  .task-notif .circle {
-    margin: 0 auto; } }
+  .standard-input-table tr td::before {
+    top: 0; } }
 @media only screen and (max-width: 667px) {
   article {
     margin-bottom: 20px;
@@ -2835,7 +2920,37 @@ a:focus {
     justify-content: center; }
 
   .status-update .white-button-container {
-    justify-content: center; } }
+    justify-content: center; }
+
+  .task-notif {
+    display: block; }
+
+  .task-notif .avatar {
+    margin-bottom: 20px; }
+
+  .task-notif .white-button-container {
+    justify-content: center;
+    margin-top: 10px; }
+
+  .task-notif .details .task-header {
+    display: block; }
+
+  .task-notif .details .task-header .tag {
+    display: inline-block;
+    margin-top: 10px; }
+
+  .task-header {
+    justify-content: space-between; }
+
+  .task-header .tag {
+    max-height: 24px; }
+
+  .feed-heading .feed-title h2 {
+    font-family: 'Roboto Regular';
+    font-weight: 500; }
+
+  .task-notif .circle {
+    margin: 0 auto; } }
 @media only screen and (max-width: 575px) {
   .site-footer .content {
     display: block;
@@ -2896,9 +3011,6 @@ a:focus {
   .bank-statement-table td::before {
     width: 45%; }
 
-  .bank-statement-table td {
-    padding-left: 50%; }
-
   .gro-notif .details .task-header {
     display: block; }
 
@@ -2910,7 +3022,16 @@ a:focus {
     font-size: 12px; }
 
   .transaction {
-    padding: 20px 0; } }
+    padding: 20px 0; }
+
+  .payment-listings-table tbody tr {
+    padding: 20px 0; }
+
+  .payment-listings-table td {
+    padding: 25px 15px 20px; }
+
+  .payment-listings-table tbody tr td::before {
+    top: 0; } }
 @media only screen and (max-width: 480px) {
   .feed-heading .feed-title h2 {
     font-size: 20px; }
@@ -2930,7 +3051,7 @@ a:focus {
     justify-content: space-between; }
 
   .task-header h3 {
-    width: 70%; }
+    width: 100%; }
 
   .task-header .tag {
     max-height: 25px; }

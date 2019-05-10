@@ -114,6 +114,8 @@
 	// Notification Variables
 	const notifButton = document.querySelector('.notifications-button');
 	const notifContent = document.querySelector('.notifications-content');
+	const notifMobileButton = document.querySelector('.notifications-mobile-button');
+	const notifMobileContent = document.querySelector('.notifications-mobile-content');
 	const toolDropdowns = document.querySelectorAll('.user-tool-dropdown');
 
 	const tabLinks = document.querySelectorAll('.listing-tab');
@@ -237,6 +239,30 @@
 		} else {
 		 	notifContent.classList.add('shown');
 			notifContent.classList.remove('hidden');
+
+			for (let i = 0; i < toolDropdowns.length; ++i) {
+					toolDropdowns[i].classList.add('hidden');
+			}
+
+		}
+
+	});
+
+	notifMobileButton.addEventListener('click', function(e) {
+
+		e.preventDefault();
+
+		if (notifMobileContent.classList.contains('shown')) {
+			notifMobileContent.classList.add('hidden');
+			notifMobileContent.classList.remove('shown');
+		
+			for (let i = 0; i < toolDropdowns.length; ++i) {
+				toolDropdowns[i].classList.remove('hidden');
+			}
+
+		} else {
+			notifMobileContent.classList.add('shown');
+			notifMobileContent.classList.remove('hidden');
 
 			for (let i = 0; i < toolDropdowns.length; ++i) {
 					toolDropdowns[i].classList.add('hidden');

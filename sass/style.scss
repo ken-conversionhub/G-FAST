@@ -538,7 +538,7 @@ a:focus {
   transition: all 0.3s ease;
 }
 
-.user-tools > li > a > i:hover {
+.main-nav .user-tools > li > a > i:hover {
   color: $borderLightRed;
 }
 
@@ -715,6 +715,35 @@ a:focus {
 
 .notifications-content::before {
   @extend %dropdownTriangle;
+  right: 35px;
+}
+
+// Notifications Dropdown
+
+.notifications-mobile-content {
+  background: $white;
+  border: 1px solid $borderGray;
+  border-radius: 5px;
+  box-shadow: 0 4px 3px rgba(0, 0, 0, 0.5);
+  min-width: 350px;
+  position: absolute;
+  right: -30px;
+  bottom: 85px;
+  transition: all 0.3s ease;
+}
+
+.notifications-mobile-content.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.notifications-mobile-content.shown {
+  opacity: 1;
+  visibility: true;
+}
+
+.notifications-mobile-content::before {
+  @extend %dropdownTriangleMobile;
   right: 35px;
 }
 
@@ -1395,6 +1424,12 @@ a:focus {
   font-weight: 600;
   padding: 20px;
   text-align: left;
+  text-transform: uppercase;
+}
+
+.payment-listings-table th,
+.movement-table th {
+  text-transform: uppercase;
 }
 
 .gray-table th:first-child {
@@ -1418,9 +1453,13 @@ a:focus {
   text-align: left;
 }
 
-.gray-table td:nth-of-type(even) {
-  background: #f8f8f8;
+.payment-listings-table td {
+  border: 1px solid #dee2e6
 }
+
+// .gray-table td:nth-of-type(even) {
+//   background: #f8f8f8;
+// }
 
 .payment-listings-table td:nth-child(3),
 .payment-listings-table td:nth-child(4) {
@@ -1665,8 +1704,6 @@ a:focus {
 }
 
 .attachment-labels {
-  display: flex;
-  justify-content: space-between;
   padding-bottom: 15px;
 }
 

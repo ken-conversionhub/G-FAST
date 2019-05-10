@@ -124,10 +124,27 @@
       
       <ul class="user-tools">
         <li class="notifications">
-          <a href="#">
+          <a href="#" class="notifications-mobile-button">
             <i class="fas fa-bell"></i>
             <div class="circle">2</div>
           </a>
+          
+          <div class="notifications-mobile-content hidden">
+            <div class="notif unread">
+              <i class="fas fa-bell"></i>
+              <div class="notif-text">
+                <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                <small>5 May 2018, 00:00 AM</small>
+              </div>
+            </div>
+            <div class="notif read">
+                <i class="fas fa-bell"></i>
+                <div class="notif-text">
+                  <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                  <small>5 May 2018, 00:00 AM</small>
+                </div>
+              </div>
+          </div>
         </li>
         <li class="settings">
           <a href="#">
@@ -462,12 +479,113 @@
 
             </div>
 
-            <div class="tab-content drafts-content">Drafts</div>
-            <div class="tab-content awaiting-approval-content">Awaiting Approval</div>
-            <div class="tab-content awaiting-payment-content">Awaiting Payment</div>
-            <div class="tab-content rejected-content">Rejected</div>
-            <div class="tab-content paid-content">Paid</div>
-            <div class="tab-content reserved-content">Reserved</div>
+            <div class="tab-content drafts-content">
+              Drafts
+            </div>
+            <div class="tab-content awaiting-approval-content">
+              
+    
+              <table class="payment-listings-table gray-table responsive-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox_all" id="checkbox_all">
+                        <label for="checkbox_all"></label>
+                      </div>
+                    </th>
+                    <th>Date</th>
+                    <th>Entry #</th>
+                    <th>Payment <br>Voucher #</th>
+                    <th>Account Description</th>
+                    <th>Amount</th>
+                    <th>Source</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox2" class="payment-checkbox" id="checkbox2">
+                        <label for="checkbox2"></label>
+                      </div>
+                    </td>
+                    <td>12 Jan 2019</td>
+                    <td>1245</td>
+                    <td>4570</td>
+                    <td>Event Expenses [2002]</td>
+                    <td>SGD 800.00</td>
+                    <td>G-FAST</td>
+                    <td><div class="tag pending">Pending Approval</div></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox3" class="payment-checkbox" id="checkbox3">
+                        <label for="checkbox3"></label>
+                      </div>
+                    </td>
+                    <td>13 Jan 2019</td>
+                    <td>1246</td>
+                    <td>4571</td>
+                    <td>Professional Service [2100]</td>
+                    <td>SGD 570.00</td>
+                    <td>OnePA</td>
+                    <td><div class="tag pending">Pending Approval</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+
+            <div class="tab-content awaiting-payment-content">
+              Awaiting Payment
+            </div>
+            <div class="tab-content rejected-content">
+              Rejected
+            </div>
+            <div class="tab-content paid-content">
+    
+              <table class="payment-listings-table gray-table responsive-table">
+                <thead>
+                  <tr>
+                    <th>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox_all" id="checkbox_all">
+                        <label for="checkbox_all"></label>
+                      </div>
+                    </th>
+                    <th>Date</th>
+                    <th>Entry #</th>
+                    <th>Payment <br>Voucher #</th>
+                    <th>Account Description</th>
+                    <th>Amount</th>
+                    <th>Source</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="custom-checkbox">
+                        <input type="checkbox" name="checkbox1" class="payment-checkbox" id="checkbox1">
+                        <label for="checkbox1"></label>
+                      </div>
+                    </td>
+                    <td>12 Jan 2019</td>
+                    <td>1233</td>
+                    <td>4566</td>
+                    <td>Event Expenses [2002]</td>
+                    <td>SGD 5,000.00</td>
+                    <td>G-FAST</td>
+                    <td><div class="tag paid">Paid</div></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="tab-content reserved-content">
+
+            </div>
 
           </div>
         </div>

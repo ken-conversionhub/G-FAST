@@ -83,6 +83,17 @@ $white: #fff;
   width: 0;
 }
 
+%dropdownTriangleMobile {
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-top: 10px solid $white;
+  top: 100%;
+  content: "";
+  height: 0;
+  position: absolute;
+  width: 0;
+}
+
 // Flexbox declaration
 %flex {
   display: flex;

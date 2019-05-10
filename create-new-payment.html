@@ -124,10 +124,27 @@
       
       <ul class="user-tools">
         <li class="notifications">
-          <a href="#">
+          <a href="#" class="notifications-mobile-button">
             <i class="fas fa-bell"></i>
             <div class="circle">2</div>
           </a>
+          
+          <div class="notifications-mobile-content hidden">
+            <div class="notif unread">
+              <i class="fas fa-bell"></i>
+              <div class="notif-text">
+                <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                <small>5 May 2018, 00:00 AM</small>
+              </div>
+            </div>
+            <div class="notif read">
+                <i class="fas fa-bell"></i>
+                <div class="notif-text">
+                  <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                  <small>5 May 2018, 00:00 AM</small>
+                </div>
+              </div>
+          </div>
         </li>
         <li class="settings">
           <a href="#">
@@ -415,7 +432,7 @@
               <tbody>
                 <tr>
                   <td>
-                    <input type="text" name="item_details" placeholder="Type in item detail or description">
+                    <input type="text" name="item_details" placeholder="Type in item description">
                   </td>
                   <td>
                     <select name="account_description">
@@ -513,7 +530,7 @@
                 </div>
                 <div class="attachment-labels">
                   <p>File size to be no more than 10MB</p>
-                  <p>Supported file : formats: .png/ .jpeg/ .pdf/ .docx/ .doc/ .ppt/ .pptx/ .png/ .xls/ .xlsx</p>
+                  <p>Supported file formats: .doc/.docx/.jpeg/.pdf/.png/.ppt/.pptx/.xls/.xlsx</p>
                 </div>
                 <div class="attached-file">
                   <div class="file-left">
@@ -549,7 +566,7 @@
           </div>
 
           <div class="online-approval-content">
-            Test
+            <!-- Insert Online Approval Content Here -->
           </div>
 
           <!-- <div class="form-section-bottom">
