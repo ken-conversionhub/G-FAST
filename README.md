@@ -2,6 +2,10 @@
 
 This is the source code for the frontend of G-FAST.
 
+## Overview
+
+
+
 ## Getting Started
 
 These instructions will get you a copy of this project up and running on your local machine for development purposes. Cloning this repository into your local environment is recommended in order to avoid conflicts in concurrent changes, access backup in a public domain, and trace previous changes for bug tracking.
@@ -13,6 +17,7 @@ For testing purposes, upload the files to Conversion Hub's dev server via FTP be
 + [Sass](https://sass-lang.com/install)
 + [Git](https://git-scm.com/downloads)
 + [Github Account](https://github.com/join)
++ [FileZilla Client](https://filezilla-project.org/)
 
 Before anything else, you must first install these prerequisites.
 
@@ -36,7 +41,7 @@ This site uses Sass to make our stylesheets more organised. The base code of our
 + Koala
 
 #### Terminal
-Once Sass is installed, compile your ass by opening the terminal in your directory and type:
+Once Sass is installed, compile your sass by opening the terminal in your directory. Type:
 
 ```
 sass --watch scss/style.scss css/style.css
@@ -55,6 +60,12 @@ This will auto-compile your Sass file into CSS. Make sure to do these steps ever
 
 
 
+## Online Preview
+
+To preview the website in Conversion Hub's dev server, open FileZilla and add the server in your Site Manager. Request the `host`, `user`, and `password` credentials from Eugene. The dev server path of this site is located in https://conversion-hub.com/projects/on-going/gfast-html/
+
 ## Authors
 
-* **Ken Samonte**
++ **Ken Samonte** wrote majority of the code for the website and created this entire documentation.
++ **Ralph Montevirgen** helped modify the initial design of the layout.
++ **Insert your name here** if you made contributions to this website.
