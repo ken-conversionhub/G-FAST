@@ -46,11 +46,13 @@ That should do the trick. For further instructions and information, check out th
 #### Koala
 You can download and install Koala from their [main website](http://koala-app.com/).
 
-Once you have downloaded and installed Koala, open it and add the root path of your project by clicking the **+** button. It will automatically scan the directory for Sass and CSS files. Once the scan is finished, right click on the base Sass file (i.e. `sass/style.scss`) and select **Set Output Path**, then select `css/style.css`. Right click once again and select **Compile**.
+Once you have downloaded and installed Koala, open it and add the root path of your project by clicking the **+** button. It will automatically scan the directory for Sass and CSS files.
+
+Once the scan is finished, right click on the base Sass file (i.e. `sass/style.scss`) and select **Set Output Path**, then select `css/style.css`. Right click once again and select **Compile**.
 
 This will auto-compile your Sass file into CSS. Make sure to do these steps every time you have to modify the stylesheets to render changes upon refreshing the pages.
 
-### Creating your separate SCSS file and importing it to the base Sass file
+### Creating your separate Sass file and importing it to the base Sass file
 
 If you wish to avoid messing up the website's CSS, it is highly suggested to create your own separate Sass file and write all of your CSS there.
 
@@ -62,9 +64,9 @@ To do this, simply create a new **.scss file** (the file name is entirely up to 
 
 ### Updating the repository
 
-In order for you to be able to push files and directly contribute to this project, your GitHub account must be assigned as a collaborator of this repository. Contact me at [ken@conversion-hub.com](mailto:ken@conversion-hub.com) so I can grant you access.
+To push files and directly contribute to this project, your GitHub account must be assigned as a collaborator of this repository. Contact me at [ken@conversion-hub.com](mailto:ken@conversion-hub.com) so I can grant you access.
 
-If someone has made changes to the files, you can download all of their changes by opening Git in your project's directory (assuming it was cloned from this repository) and type:
+If someone has made changes to the files, you can download all of their changes by opening git in your project's directory (assuming it was cloned from this repository) and type:
 
 ```
 git pull
@@ -72,17 +74,17 @@ git pull
 
 That should automatically update your files to the latest changes.
 
-If you wish to check the status of your modified files and whether they have been pushed to the repository or not, type: `git status` in your Git Bash terminal.
+If you wish to check the status of your modified files and whether they have been pushed to the repository or not, type: `git status` in your git bash terminal.
 
 If you wish to push your changes to the repository, you may use the git commands `add`, `commit`, and `push`. Here is an example:
 
 ```
 git add .
-git commit -m 'Modified the CSS file'
+git commit -m 'Modified the View Payments page'
 git push
 ```
 
-**Important:** You must set your name and email on Git before pushing to the repository. Type the following in your git bash terminal (replace John Doe with your own name):
+**Important:** You must set your name and email on git before pushing to the repository. Type the following in your git bash terminal (replace John Doe with your own name):
 
 ```
 git config --global user.name 'John Doe'
@@ -97,7 +99,7 @@ Make sure you push all of your changes to this GitHub repository after you have 
 
 ## Authors
 
-+ **Ken Samonte** wrote majority of the code for the website and wrote the entire documentation.
++ **Ken Samonte** wrote majority of the code for the website and created the documentation.
 + **Ralph Montevirgen** helped modify the initial design of the layout.
 
 Feel free to insert your name here if you made contributions to this website.
