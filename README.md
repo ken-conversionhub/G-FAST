@@ -1,6 +1,6 @@
 # G-FAST
 
-This is the source code for the frontend of G-FAST.
+This is the source code for the frontend of G-FAST. This documentation serves as a guide for developers who wish to make contributions to the source code.
 
 ## Getting Started
 
@@ -91,7 +91,7 @@ git config --global user.email 'johndoe@jconversion-hub.com
 
 ## Online Preview
 
-To preview the website in Conversion Hub's dev server, open FileZilla and add the server in your Site Manager. Request the `host`, `user`, and `password` credentials from Eugene. The dev server path of this site is located in https://conversion-hub.com/projects/on-going/gfast-html/
+To preview your changes in Conversion Hub's dev server, open FileZilla and add the server in your Site Manager. Request the `host`, `user`, and `password` credentials from Eugene. The dev server path of this site is located in https://conversion-hub.com/projects/on-going/gfast-html/
 
 Make sure you push all of your changes to this GitHub repository after you have uploaded your files into the dev server.
 
