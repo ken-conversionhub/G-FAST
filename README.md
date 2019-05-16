@@ -2,10 +2,6 @@
 
 This is the source code for the frontend of G-FAST.
 
-## Overview
-
-
-
 ## Getting Started
 
 These instructions will get you a copy of this project up and running on your local machine for development purposes. Cloning this repository into your local environment is recommended in order to avoid conflicts in concurrent changes, access backup in a public domain, and trace previous changes for bug tracking.
@@ -45,20 +41,20 @@ Once Sass is installed, compile your Sass by opening the terminal in your direct
 sass --watch scss/style.scss css/style.css
 ```
 
-That should do the trick. For further instructions and information, check out the Sass official [guide](https://sass-lang.com/guide), under the Preprocessing section.
+That should do the trick. For further instructions and information, check out the Sass official [guide](https://sass-lang.com/guide) under the Preprocessing section.
 
 #### Koala
 You can download and install Koala from their [main website](http://koala-app.com/).
 
-Once you have downloaded and installed Koala, open it and add the root path to your project by clicking the **+** button. It will automatically scan the directory for Sass and CSS files. Once the scan is finished, right click on the base Sass file (i.e. `sass/style.scss`) and select **Set Output Path**, then select `css/style.css`. Right click once again and select **Compile**.
+Once you have downloaded and installed Koala, open it and add the root path of your project by clicking the **+** button. It will automatically scan the directory for Sass and CSS files. Once the scan is finished, right click on the base Sass file (i.e. `sass/style.scss`) and select **Set Output Path**, then select `css/style.css`. Right click once again and select **Compile**.
 
-This will auto-compile your Sass file into CSS. Make sure to do these steps every time you have to modify the files.
+This will auto-compile your Sass file into CSS. Make sure to do these steps every time you have to modify the stylesheets to render changes upon refreshing the pages.
 
 ### Creating your separate SCSS file and importing it to the base Sass file
 
 If you wish to avoid messing up the website's CSS, it is highly suggested to create your own separate Sass file and write all of your CSS there.
 
-To do this, simply create a new **.scss file** (the file name is entirely up to you) but make sure that an underscore precedes the file name (e.g. `_custom.scss`). Import it by writing `@import "(file name without the underscore)"`. For example, write this at the of `style.scss`, next to the previously imported Sass files:
+To do this, simply create a new **.scss file** (the file name is entirely up to you) but make sure that an underscore precedes the file name (e.g. `_custom.scss`). Import it by writing `@import "(file name without the underscore)"`. For example, write this at the top of `style.scss`, next to the previously imported Sass files:
 
 ```
 @import "custom"
@@ -66,7 +62,7 @@ To do this, simply create a new **.scss file** (the file name is entirely up to 
 
 ### Updating the repository
 
-In order for you to be able to push files and directly contribute to this project, your GitHub account must be assigned as a collaborator of this repository. Contact me at [ken-conversion-hub.com](mailto:ken-conversion-hub.com) so I can grant you access.
+In order for you to be able to push files and directly contribute to this project, your GitHub account must be assigned as a collaborator of this repository. Contact me at [ken@conversion-hub.com](mailto:ken@conversion-hub.com) so I can grant you access.
 
 If someone has made changes to the files, you can download all of their changes by opening Git in your project's directory (assuming it was cloned from this repository) and type:
 
@@ -103,4 +99,5 @@ Make sure you push all of your changes to this GitHub repository after you have 
 
 + **Ken Samonte** wrote majority of the code for the website and wrote the entire documentation.
 + **Ralph Montevirgen** helped modify the initial design of the layout.
-+ **Insert your name here** if you made contributions to this website.
+
+Feel free to insert your name here if you made contributions to this website.
