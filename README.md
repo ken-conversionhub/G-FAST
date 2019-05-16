@@ -26,6 +26,16 @@ Scroll up on this repository and click the **Clone or download** button, where a
 git clone https://github.com/ken-conversionhub/G-FAST.git
 ```
 
+This command will do the entire cloning process. After waiting for a few minutes, you should be notified that the cloning process is done and all of the files in this repository are now accessible in your local server. You are free to modify 
+
+### Creating your separate CSS file and importing it to the base Sass file
+
+This site uses Sass to make our stylesheets more organised. The base code of our styles is located in ```sass/style.sass``` which compiles to ```css/style.css```, so it is highly recommended to avoid manually updating the CSS files and instead write your CSS in the Sass files.
+
+### Updating the repository
+
+
+
 ## Authors
 
 * **Ken Samonte**
