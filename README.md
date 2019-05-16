@@ -20,10 +20,10 @@ Before anything else, you must first install these prerequisites.
 
 In order to clone this website to your local environment, create a separate folder where you wish to place the files. Right click the folder you created then select **Git Bash Here**. The command line will appear.
 
-Scroll up on this repository and click the **Clone or download** button, where a dropdown will appear with a link provided. Copy that link. Go back to the command line then type **git clone <paste the link you just created>**.
+Scroll up on this repository and click the **Clone or download** button, where a dropdown will appear with a link provided. Copy that link. Go back to the command line then type **git clone (link you just copied)**. For example:
 
 ```
-
+git clone https://github.com/ken-conversionhub/G-FAST.git
 ```
 
 ## Authors
