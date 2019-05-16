@@ -41,7 +41,7 @@ This site uses Sass to make our stylesheets more organised. The base code of our
 + Koala
 
 #### Terminal
-Once Sass is installed, compile your sass by opening the terminal in your directory. Type:
+Once Sass is installed, compile your Sass by opening the terminal in your directory. Type:
 
 ```
 sass --watch scss/style.scss css/style.css
@@ -58,11 +58,35 @@ This will auto-compile your Sass file into CSS. Make sure to do these steps ever
 
 ### Creating your separate SCSS file and importing it to the base Sass file
 
-If you wish to avoid messing up the website's CSS, it is highly suggested to create your own separate Sass file and write all of your CSS there. To do this, simply create a new **.scss file** (the file name is entirely up to you) but make sure that an underscore precedes the file name (e.g. `_custom.scss`). Import it by writing **@import "(file name without the underscore)"**, e.g. `@import "custom"` at the top of `style.scss`, next to the previously imported Sass files.
+If you wish to avoid messing up the website's CSS, it is highly suggested to create your own separate Sass file and write all of your CSS there.
+
+To do this, simply create a new **.scss file** (the file name is entirely up to you) but make sure that an underscore precedes the file name (e.g. `_custom.scss`). Import it by writing `@import "(file name without the underscore)"`. For example, write this at the of `style.scss`, next to the previously imported Sass files:
+
+```
+@import "custom"
+```
 
 ### Updating the repository
 
+In order for you to be able to push files and directly contribute to this project, your GitHub account must be assigned as a collaborator of this repository. Contact me at [ken-conversion-hub.com](mailto:ken-conversion-hub.com) so I can grant you access.
 
+If someone has made changes to the files, you can download all of their changes by opening Git in your project's directory (assuming it was cloned from this repository) and type:
+
+```
+git pull
+```
+
+That should automatically update your files to the latest changes.
+
+If you wish to push your changes to the repository, you may use the git commands `add`, `commit`, and `push`. Here is an example:
+
+```
+git add .
+
+git commit -m 'Modified the CSS file'
+
+git push
+```
 
 ## Online Preview
 
