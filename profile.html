@@ -1,0 +1,567 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!-- SEO -->
+<meta name="author" content="Ken Samonte &lt;khsamonte@gmail.com&gt;">
+<meta  name="description" content="">
+<title>G-Fast Dashboard</title>
+
+<!-- Presentation -->
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+<link rel="stylesheet" href="css/vendor/slick.css">
+<link rel="stylesheet" href="css/style.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<!-- Structure -->
+<body>
+
+<div class="overlay"> </div>
+
+<!-- # Mobile Search -->
+<aside class="mobile-search">
+  
+  <div class="mobile-search-container">
+    <div class="close-mobile-search">
+      <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+    
+    <form class="mobile-search-form">
+      <input type="search" name="masthead_search" placeholder="Search">
+      <button type="submit" name="masthead_submit">
+        <i class="fas fa-search"></i>
+      </button>
+    </form>
+  </div>
+
+</aside>
+
+<!-- # Mobile Navigation # -->
+<aside class="mobile-nav">
+
+  <!-- ## Mobile Nav Header -->
+  <header class="mobile-admin">
+    <div class="content">
+      <div class="mobile-user">
+        <img src="img/lily-tan.png" alt="avatar">
+        <div class="admin">
+          <div class="admin-user">Lily Tan</div>
+          <small>AMK RC</small>
+        </div>
+      </div>
+
+      <div class="close-btn">
+        <i class="fa fa-times" aria-hidden="true"></i>
+      </div>
+    </div>
+  </header>
+
+  <!-- ## Mobile Nav Menu -->
+  <nav class="mobile-menu">
+    <ul>
+      <li class="current-page"><a href="#">Dashboard </a></li>
+      <li class="has-submenu">
+        <a href="#">New Entries <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">New Payments</a></li>
+          <li><a href="#">Receipts</a></li>
+          <li><a href="#">Transfer of Funds</a></li>
+          <li><a href="#">Journal</a></li>
+          <li><a href="#">Gift Voucher</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">View Transactions <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">View Payments</a></li>
+          <li><a href="#">View Receipts</a></li>
+          <li><a href="#">View Transfer of Funds</a></li>
+          <li><a href="#">View Journal</a></li>
+          <li><a href="#">View Gift Voucher Movement</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Banking <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">Bank Statement</a></li>
+          <li><a href="#">Bank Reconciliation</a></li>
+          <li><a href="#">Submit Accounts for Month’s Close</a></li>
+        </ul>
+      </li>
+      <li class="has-submenu">
+        <a href="#">Reports <i class="fas fa-angle-down"></i></a>
+        <ul class="mobile-submenu">
+          <li><a href="#">Income & Expenditure</a></li>
+          <li><a href="#">Balance Sheet</a></li>
+          <li><a href="#">Receipt & Payment</a></li>
+          <li><hr></li>
+          <li><a href="#">Other Financial Reports</a></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+
+  <!-- ## Mobile Switch Accounts -->
+  <div class="switch-account">
+    <div class="content">
+      <a href="">Switch Account</a>
+      <small>Currently signed in as AMK RC</small>
+    </div>
+  </div>
+
+  <!-- ## Mobile Sign Out -->
+  <footer class="sign-out">
+    <div class="content">
+      
+      <div class="sign-out-link">
+        <a href="">Sign Out</a>
+      </div>
+      
+      <ul class="user-tools">
+        <li class="notifications">
+          <a href="#" class="notifications-mobile-button">
+            <i class="fas fa-bell"></i>
+            <div class="circle">2</div>
+          </a>
+          
+          <div class="notifications-mobile-content hidden">
+            <div class="notif unread">
+              <i class="fas fa-bell"></i>
+              <div class="notif-text">
+                <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                <small>5 May 2018, 00:00 AM</small>
+              </div>
+            </div>
+            <div class="notif read">
+                <i class="fas fa-bell"></i>
+                <div class="notif-text">
+                  <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                  <small>5 May 2018, 00:00 AM</small>
+                </div>
+              </div>
+          </div>
+        </li>
+        <li class="settings">
+          <a href="#">
+            <i class="fas fa-cog"></i>
+          </a>
+        </li>
+        <li class="help">
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </footer>
+</aside>
+
+<!-- # Mobile Header # -->
+<header class="mobile-header" id="mobile-header">
+  <div class="container">
+    <div class="content">
+      <div class="burger">
+        <a href="#" class="open-mobile-nav"><i class="fas fa-bars"></i></a>
+      </div>
+      <div class="mobile-logo">
+        <img src="img/footer-text-logo.png" alt="G-Fast">
+      </div>
+      <div class="search">
+        <a href="#" class="open-mobile-search"><i class="fas fa-search"></i></a>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- # Desktop Header # -->
+<header class="main-header" id="main-header">
+
+  <!-- ## Topmost Header -->
+  <div class="top-header">
+    <div class="container">
+      <div class="content">
+        <img src="img/merlion-icon.png" alt="Merlion">
+        <div class="subhead">A Singapore Government Agency Website</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ## Logo & Search Header -->
+  <div class="masthead">
+    <div class="container">
+      <div class="content">
+
+        <div class="logo">
+          <a href="#"><img src="img/footer-text-logo.png" alt="G-Fast"></a>
+        </div>
+        <form class="masthead-search">
+          <input type="search" name="masthead_search" placeholder="Search">
+          <button type="submit" name="masthead_submit">
+            <i class="fas fa-search"></i>
+          </button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- # Desktop Navigation # -->
+<nav class="main-nav" id="main-nav">
+  <div class="container">
+    <div class="content">
+
+      <!-- ## Site Menu -->
+      <ul class="site-menu">
+        <li class="active"><a href="#">Dashboard</a></li>
+        <li>
+          <a href="#">New Entries <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">New Payments</a></li>
+              <li><a href="#">Receipts</a></li>
+              <li><a href="#">Transfer of Funds</a></li>
+              <li><a href="#">Journal</a></li>
+              <li><a href="#">Gift Voucher</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="#">View Transactions <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">View Payments</a></li>
+              <li><a href="#">View Receipts</a></li>
+              <li><a href="#">View Transfer of Funds</a></li>
+              <li><a href="#">View Journal</a></li>
+              <li><a href="#">View Gift Voucher Movement</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="#">Banking <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">Bank Statement</a></li>
+              <li><a href="#">Bank Reconciliation</a></li>
+              <li><a href="#">Submit Accounts for Month’s Close</a></li>
+            </ul>
+          </nav>
+        </li>
+        <li>
+          <a href="#">Reports <i class="fas fa-caret-down"></i></a>
+          <nav class="site-menu-dropdown">
+            <ul>
+              <li><a href="#">Income & Expenditure</a></li>
+              <li><a href="#">Balance Sheet</a></li>
+              <li><a href="#">Receipt & Payment</a></li>
+              <li><hr></li>
+              <li><a href="#">Other Financial Reports</a></li>
+            </ul>
+          </nav>
+        </li>
+      </ul>
+
+      <!-- ## User Tools -->
+      <ul class="user-tools">
+
+        <li class="notifications">
+          <a href="#" class="notifications-button">
+            <i class="fas fa-bell"></i>
+            <div class="circle">2</div>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Notifications</h4>
+              <p>Showing recent updates about your account.</p>
+            </div>
+          </div>
+          <div class="notifications-content hidden">
+            <div class="notif unread">
+              <i class="fas fa-bell"></i>
+              <div class="notif-text">
+                <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                <small>5 May 2018, 00:00 AM</small>
+              </div>
+            </div>
+            <div class="notif read">
+                <i class="fas fa-bell"></i>
+                <div class="notif-text">
+                  <p>Tender for Lantern Festival 2019 Event has closed for bids. Review and award bids here.</p>
+                  <small>5 May 2018, 00:00 AM</small>
+                </div>
+              </div>
+          </div>
+        </li>
+
+        <li class="settings">
+          <a href="#">
+            <i class="fas fa-cog"></i>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Settings</h4>
+              <p>Configure your account information, etc.</p>
+            </div>
+          </div>
+        </li>
+        <li class="help">
+          <a href="#">
+            <i class="fas fa-question-circle"></i>
+          </a>
+          <div class="user-tool-dropdown">
+            <div class="tool-dropdown-container">
+              <h4>Help & Support</h4>
+              <p>Get some help from our support.</p>
+            </div>
+          </div>
+        </li>
+        <li class="admin-panel">
+          <a href="#">
+            <img src="img/lily-tan.png" alt="avatar">
+            <div class="admin">
+              <div class="admin-user">Lily Tan</div>
+              <small>AMK RC</small>
+            </div>
+          </a>
+          <nav class="admin-panel-dropdown">
+            <div class="panel-dropdown-container">
+              <ul class="admin-nav">
+                <li><a href="#">User Profile</a></li>
+                <li><a href="#">Account</a></li>
+                <li><a href="#">Support</a></li>
+                <li><a href="#">Sign Out</a></li>
+              </ul>
+              <footer class="admin-switch-account">
+                <a href="#">Switch Account</a>
+                <small>AMK RC</small>
+              </footer>
+            </div>
+          </nav>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- # New Payments # -->
+<section class="profile-setting-page padded-section">
+  <header class="page-title">
+    <div class="container">
+
+      <div class="main-title">
+        <h1>Profile Settings</h1>
+        <div class="breadcrumbs">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="">Settings</a></li>
+            <li><a href="" class="active">Profile Settings</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+  </header>
+
+  <form class="standard-form">
+    <div class="container">
+      <div class="frame-container">
+        <div class="content">
+          <h2>General Information</h2>
+
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="full_name">Name</label>
+              <input type="text" name="full_name" id="full_name">
+            </div>
+          </div>
+
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="e_mail">Email Address</label>
+              <input type="text" name="e_mail" id="e_mail">
+            </div>
+          </div>
+
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="contact_num">Contact #</label>
+              <input type="text" name="contact_num" id="contact_num">
+            </div>
+          </div>
+
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="contact_num">Photo</label>
+              <div class="avatar">
+                <div class="circle-avatar">
+                  <img src="img/profile-avatar.png" alt="profile avatar">
+                  <a class="change" href="javascript:void(0);">Change Photo</a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="frame-container">
+        <div class="content">
+          <h2>Role</h2>
+
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="grassroot_org">Grassroot Organisation</label>
+              <select name="grassroot_org" id="grassroot_org">
+                <option value="#" disabled selected>---</option>
+                <option value="#">And Mo Kio GRC</option>
+                <option value="#">GRO 2</option>
+                <option value="#">GRO 3</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="appointment">Appointment</label>
+              <select name="appointment" id="appointment">
+                <option value="#" disabled selected>---</option>
+                <option value="#">Chairman</option>
+                <option value="#">Constituency Officer</option>
+                <option value="#">Grassroot Leader</option>
+                <option value="#">Treasurer</option>
+                <option value="#">Option 5</option>
+              </select>
+            </div>
+          </div>
+          
+          <div class="button">
+            <button class="white-button">Add New Role</button>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="frame-container">
+        <div class="content">
+          <h2>Security</h2>
+
+          <div class="form-section-profile">
+              <div class="form-section-pass">
+                <label for="curr_password">Current Password</label>
+                <div class="holder">
+                  <input type="text" name="curr_password" id="curr_password" placeholder="Key in your current password">
+                  <a class="change" data-toggle="modal" data-target="#forgotPass">Forgot your password?</a>
+                </div>
+              </div>
+          </div>
+          
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="new_password">New Password</label>
+              <input type="text" name="new_password" id="new_password">
+            </div>
+          </div>
+
+          <div class="form-section-profile">
+            <div class="form-section">
+              <label for="renew_password">Re-enter Password</label>
+              <input type="text" name="renew_password" id="renew_password">
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="buttons-footer">
+        <div class="content">
+
+          <div class="buttons-left">
+            
+          </div>
+          <div class="buttons-right">
+            <button class="white-button">Cancel</button>
+            <a class="red-button" href="#">Save</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </form>
+</section>
+<!-- # Site Footer # -->
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="content">
+      <div class="footer-logo">
+        <img src="img/footer-logo.png" alt="Footer Logo">
+        <img src="img/footer-text-logo.png" alt="G-Fast">
+      </div>
+      <nav class="footer-nav">
+        <ul>
+          <li><a href="">Contact</a></li>
+          <li><a href="">Tell us More</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+</footer>
+<footer class="copyright-footer">
+  <div class="container">
+    <div class="content">
+      <nav class="copyright-nav">
+        <ul>
+          <li><a href="">Privacy Statement</a></li>
+          <li><a href="">Terms of Use</a></li>
+        </ul>
+      </nav>
+      <aside class="copyright">
+        © 2019 Government of Singapore
+      </aside>
+    </div>
+  </div>
+</footer>
+
+<!--modal-->
+  <div class="modal fade" id="forgotPass" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Forgot Password?</h5>
+        </div>
+        <div class="modal-body">
+          We will send reset password instructions to your e-mail address <a href="">jameslee@pa.gov.sg</a>
+        </div>
+        <div class="modal-footer">
+          <button class="white-button" type="button" data-dismiss="modal">Cancel</button>
+          <button class="red-button">Yes</button>
+        </div>
+      </div>
+    </div>
+  </div>
+<!--end of modal-->
+
+<!-- Behaviour -->
+<script src="js/vendor/jquery.js"></script>
+<!-- <script src="js/vendor/jquery-ui.min.js"></script>
+<script src="js/vendor/jquery.waypoints.min.js"></script> -->
+<script src="js/vendor/jquery.nice-select.min.js"></script>
+<script src="js/vendor/slick.min.js"></script>
+<script src="js/index.js"></script>
+<!--[if lt IE 9]>
+<script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+</body>
+</html>

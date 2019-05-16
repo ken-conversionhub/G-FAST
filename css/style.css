@@ -1337,7 +1337,7 @@ a:focus {
 .gray-table th {
   border-bottom: 1px solid #dee2e6;
   color: #000;
-  font: 16px "Roboto Regular", Helvetica, sans-serif;
+  font: 15px "Roboto Regular", Helvetica, sans-serif;
   font-weight: 600;
   padding: 20px;
   text-align: left;
@@ -2585,7 +2585,10 @@ a:focus {
     padding-top: 0px; }
 
   .distribution-details-table .with-margin {
-    margin-top: 10px; } }
+    margin-top: 10px; }
+
+  .frame-container h2 {
+    font-size: 30px; } }
 @media (max-width: 1024px) and (min-width: 768px) {
   .transaction-table,
   .transaction-table thead,
