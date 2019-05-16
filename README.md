@@ -10,8 +10,6 @@ This is the source code for the frontend of G-FAST.
 
 These instructions will get you a copy of this project up and running on your local machine for development purposes. Cloning this repository into your local environment is recommended in order to avoid conflicts in concurrent changes, access backup in a public domain, and trace previous changes for bug tracking.
 
-For testing purposes, upload the files to Conversion Hub's dev server via FTP before or after committing and pushing to this repository.
-
 ### Prerequisites
 + Text Editor (e.g. [VSCode](https://code.visualstudio.com/), [Brackets](http://brackets.io/), [Atom](https://atom.io/), [Sublime Text](https://www.sublimetext.com/))
 + [Sass](https://sass-lang.com/install)
@@ -88,7 +86,7 @@ git commit -m 'Modified the CSS file'
 git push
 ```
 
-**Important:** You must set your name and email on Git before pushing to the repository. Type the following to your git bash terminal (replace John Doe with your own name):
+**Important:** You must set your name and email on Git before pushing to the repository. Type the following in your git bash terminal (replace John Doe with your own name):
 
 ```
 git config --global user.name 'John Doe'
@@ -98,6 +96,8 @@ git config --global user.email 'johndoe@jconversion-hub.com
 ## Online Preview
 
 To preview the website in Conversion Hub's dev server, open FileZilla and add the server in your Site Manager. Request the `host`, `user`, and `password` credentials from Eugene. The dev server path of this site is located in https://conversion-hub.com/projects/on-going/gfast-html/
+
+Make sure you push all of your changes to this GitHub repository after you have uploaded your files into the dev server.
 
 ## Authors
 
