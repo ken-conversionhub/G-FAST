@@ -78,14 +78,21 @@ git pull
 
 That should automatically update your files to the latest changes.
 
+If you wish to check the status of your modified files and whether they have been pushed to the repository or not, type: `git status` in your Git Bash terminal.
+
 If you wish to push your changes to the repository, you may use the git commands `add`, `commit`, and `push`. Here is an example:
 
 ```
 git add .
-
 git commit -m 'Modified the CSS file'
-
 git push
+```
+
+**Important:** You must set your name and email on Git before pushing to the repository. Type the following to your git bash terminal (replace John Doe with your own name):
+
+```
+git config --global user.name 'John Doe'
+git config --global user.email 'johndoe@jconversion-hub.com
 ```
 
 ## Online Preview
