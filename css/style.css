@@ -1277,7 +1277,7 @@ a:focus {
   padding: 60px 60px 30px; }
 
 .frame-container h2 {
-  font: 35px "Roboto Regular", Helvetica, sans-serif;
+  font: 30px "Roboto Regular", Helvetica, sans-serif;
   margin-bottom: 30px; }
 
 .payment-listings .tab-content {
@@ -1566,7 +1566,7 @@ a:focus {
 
 .form-section-attachment p {
   color: #000;
-  font: 15px "Roboto Regular", Helvetica, sans-serif; }
+  font: 12px "Roboto Regular", Helvetica, sans-serif; }
 
 .attachment-labels {
   padding-bottom: 15px; }
@@ -2077,7 +2077,7 @@ a:focus {
   flex: 3; }
 
 .status-update {
-  border: 2px solid #e6e8eb;
+  border: 1px solid #e6e8eb;
   border-radius: 10px;
   align-items: center;
   background: #fff;
@@ -2171,6 +2171,9 @@ a:focus {
 
 .notif-tab-content.hidden {
   display: none; }
+
+.feed.notif-tab-content .details .task-header h3 {
+  font-size: 20px; }
 
 .distribution-form h4 {
   color: #000;
@@ -2588,7 +2591,29 @@ a:focus {
     margin-top: 10px; }
 
   .frame-container h2 {
-    font-size: 30px; } }
+    font-size: 30px; }
+
+  .payment-listings-table tbody tr td::before {
+    color: #9c9c9c;
+    text-transform: uppercase;
+    top: 0; }
+
+  .payment-listings-table tbody tr td:nth-child(3)::before,
+  .payment-listings-table tbody tr td:nth-child(4)::before {
+    color: #c8010f; }
+
+  .task-header {
+    justify-content: space-between;
+    margin-bottom: 10px; }
+
+  .feed .details .task-header h3 {
+    width: 70%; }
+
+  .feed .details .task-header .tag {
+    text-align: center;
+    max-height: 25px;
+    max-width: 60px;
+    width: 25%; } }
 @media (max-width: 1024px) and (min-width: 768px) {
   .transaction-table,
   .transaction-table thead,
@@ -3033,8 +3058,8 @@ a:focus {
   .payment-listings-table td {
     padding: 25px 15px 20px; }
 
-  .payment-listings-table tbody tr td::before {
-    top: 0; } }
+  .notif-tab > small {
+    display: none !important; } }
 @media only screen and (max-width: 480px) {
   .feed-heading .feed-title h2 {
     font-size: 20px; }
@@ -3051,13 +3076,17 @@ a:focus {
     padding: 10px; }
 
   .task-header {
-    justify-content: space-between; }
+    margin-bottom: 10px; }
 
   .task-header h3 {
-    width: 100%; }
+    width: 70%; }
 
   .task-header .tag {
-    max-height: 25px; }
+    max-height: 25px;
+    width: 20%; }
+
+  .feed .details .task-header .tag {
+    text-align: center; }
 
   .feed article {
     padding: 35px 25px; }

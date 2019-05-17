@@ -1336,7 +1336,7 @@ a:focus {
 }
 
 .frame-container h2 {
-  font: 35px $font;
+  font: 30px $font;
   margin-bottom: 30px;
 }
 
@@ -1699,7 +1699,7 @@ a:focus {
 
 .form-section-attachment p {
   color: $black;
-  font: 15px $font;
+  font: 12px $font;
 }
 
 .attachment-labels {
@@ -2356,7 +2356,7 @@ a:focus {
 
 .status-update {
   @extend %flex;
-  border: 2px solid $borderGray;
+  border: 1px solid $borderGray;
   border-radius: 10px;
   align-items: center;
   background: #fff;
@@ -2487,6 +2487,10 @@ a:focus {
 
 .notif-tab-content.hidden {
   display: none;
+}
+
+.feed.notif-tab-content .details .task-header h3 {
+  font-size: 20px;
 }
 
 .distribution-form h4 {
